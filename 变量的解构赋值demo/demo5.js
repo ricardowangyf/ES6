@@ -7,3 +7,5 @@ e
 
 let { length: len } = 'hello';
 len
+
+//字符串的解构赋值
