@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var result = [{
+                id: 1,
+                name: '湖北省',
+                child: [{
+                    parentId: 1,
+                    name: '黄冈市'
+                }, {
+                    parentId: 1,
+                    name: '咸宁市'
+                }, {
+                    parentId: 1,
+                    name: "随州市"
+                }, ]
+            },
+
+
+            {
+                id: 2,
+                name: '北京市',
+                child: [{
+                    parentId: 2,
+                    name: '东城区'
+                }, {
+                    parentId: 2,
+                    name: '西城区'
+                }, {
+                    parentId: 2,
+                    name: "朝阳区"
+                }, {
+                    parentId: 2,
+                    name: "丰台区"
+                }, {
+                    parentId: 2,
+                    name: "石景山区"
+                }, {
+                    parentId: 2,
+                    name: "海淀区"
+                }, ]
+            },
+
+
+            {
+                id: 3,
+                name: '上海市',
+                child: [{
+                    parentId: 3,
+                    name: "黄浦区",
+                }, {
+                    parentId: 3,
+                    name: "徐汇区",
+                }, {
+                    parentId: 3,
+                    name: "长宁区",
+                }, ]
+            },
+        ]
+
+
+        var array = [{
+            id: 1,
+            name: '湖北省'
+        }, {
+            id: 2,
+            name: '北京市'
+        }, {
+            id: 3,
+            name: '上海市'
+        }, {
+            parentId: 2,
+            name: '东城区'
+        }, {
+            parentId: 2,
+            name: '西城区'
+        }, {
+            parentId: 2,
+            name: "朝阳区"
+        }, {
+            parentId: 2,
+            name: "丰台区"
+        }, {
+            parentId: 2,
+            name: "石景山区"
+        }, {
+            parentId: 2,
+            name: "海淀区"
+        }, {
+            parentId: 1,
+            name: '黄冈市'
+        }, {
+            parentId: 1,
+            name: '咸宁市'
+        }, {
+            parentId: 1,
+            name: "随州市"
+        }, {
+            parentId: 3,
+            name: "黄浦区",
+        }, {
+            parentId: 3,
+            name: "徐汇区",
+        }, {
+            parentId: 3,
+            name: "长宁区",
+        }, ]
+    </script>
+</body>
+
+</html>
