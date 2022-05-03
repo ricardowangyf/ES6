@@ -10,18 +10,13 @@
 
 <body>
     <script>
-        var a = 'wang'
-        var b = 'yu'
-        var c = 'fei'
+        const arr = ['wang', 'a', 'yu', 'b', 'fei'];
 
+        const result = arr.filter(arr => arr.length > 1);
 
-        const arr = [a, b, c];
+        console.log(result)
 
-        for (var i in arr) {
-            arr.push();
-        }
-
-        console.log(arr)
+        //['wang', 'yu', 'fei']
     </script>
 </body>
 
