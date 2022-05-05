@@ -10,13 +10,31 @@
 
 <body>
     <script>
-        let o = Object(undefined)
-        o.foo = 42
+        const target = {
+            a: 1,
+            b: 5,
+            c: 1
+        };
+        // target是一个目标对象
 
-        console.log(o)
 
-        // Object { foo: 42 }
-        //创建一个新对象
+        const source = {
+            a: 2,
+            b: 4,
+            c: 5
+        };
+        //source是一个源对象
+        // 如果目标对象中的属性具有相同的键
+        // ({目标对象target中的a:1与b:5与c:1)(源对象中的a:2与b：4与c:5}）
+        // 那么属性将被源对象中的属性覆盖。后面的源对象的属性将覆盖前面的源对象的属性。
+
+
+        const returnedTarget = Object.assign(target, source);
+        console.log(returnedTarget);
+        // Object.assign()
+        //将所有可枚举属性的值从一个或多个源对象分配到目标对象。它将返回目标对象。
+
+        // 输出结果{a: 2, b: 4, c: 5}
     </script>
 </body>
 
