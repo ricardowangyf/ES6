@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = ['wang', 'a', ['yu', 123], 'bx', 'bxe', 'fei'];
+        var namelistA = new Array(4294967296); // 2的32次方 = 4294967296
+        var namelistC = new Array(-100) // 负号
+
+        console.log(namelistA.length); // RangeError: 无效数组长度
+        console.log(namelistC.length); // RangeError: 无效数组长度
+
+
+        console.log(arr.length)
+    </script>
+</body>
+
+</html>
