@@ -10,18 +10,13 @@
 
 <body>
     <script>
-        var s = 'hello';
-
-        for (var i = 0; i < s.length; i++) {
-            console.log(s[i]);
-            document.write(s[i] + '<br/>')
-
+        var a = [];
+        for (let i = 0; i < 10; i++) {
+            a[i] = function() {
+                console.log(i);
+            };
         }
-
-        console.log(i);
-        document.write(i)
-
-        // 不允许重复声明 let不允许在相同作用域内，重复声明同一个变量。
+        a[6](); // 6
     </script>
 </body>
 
