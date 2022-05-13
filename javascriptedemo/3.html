@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p id="demo"></p>
+        <!-- JS语句向id='demo'的HTML元素输出文本Dolly -->
+
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <!-- 每条可执行的语句结尾添加分号 使用分号的另一用处是在一行中编写多条语句。 -->
+    </div>
+
+    <hr/>
+
+    <div>
+        <p id="demo3"></p>
+        <div id="demo4"></div>
+        <!-- 浏览器按照编写顺序依次执行每条语句 -->
+    </div>
+
+    <hr/>
+
+    <div>
+        <p id="demon">aaaaaaaaaa</p>
+        <div id="demoa">dddddddddddddd</div>
+        <button type="button" onclick="aaaaaaaa()">点击</button>
+        <!-- 代码块以左花括号开始，以右花括号结束。代码块的作用是一并地执行语句序列。 -->
+    </div>
+
+    <hr/>
+
+    <script>
+        document.getElementById("demo").innerHTML = " Dolly";
+        // JS语句向id='demo'的HTML元素输出文本Dolly
+
+        a = 1;
+        b = 2;
+        c = 3;
+        d = a + b + c;
+        document.getElementById("demo1").innerHTML = d;
+        x = 1;
+        y = 2;
+        z = 3;
+        n = x + y + z;
+        document.getElementById("demo2").innerHTML = n;
+        // 每条可执行的语句结尾添加分号。
+        // 使用分号的另一用处是在一行中编写多条语句。
+
+        document.getElementById("demo3").innerHTML = "aaaaa";
+        document.getElementById("demo4").innerHTML = 'ccccc';
+        // 浏览器按照编写顺序依次执行每条语句
+
+
+
+        function aaaaaaaa() {
+            document.getElementById("demon").innerHTML = "aaaasda / regrg"
+            document.getElementById("demoa").innerHTML = "gbrgiqrbgqrgq"
+
+            // 代码块以左花括号开始，以右花括号结束。
+            // 代码块的作用是一并地执行语句序列。
+        }
+    </script>
+</body>
+
+</html>
