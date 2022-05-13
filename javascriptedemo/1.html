@@ -16,11 +16,19 @@
 
     <script>
         window.alert(5 + 6);
+
+        // 弹出警告框来显示数据
+
         document.getElementById("demo").innerHTML = "段落已修改。";
+
+        // 在JS中访问某个HTML元素，可以使用document.getElementById(id)
+
         document.write(Date())
 
         function aaa() {
             document.write(Date())
+
+            // document.write()能向文档输出写内容，文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖
         }
 
         a = 5;
@@ -28,6 +36,7 @@
         c = 5;
         d = a + b + c;
         console.log('打印结果: ' + d)
+            // console.log方法打印
     </script>
 </body>
 
