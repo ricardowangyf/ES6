@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--JS作用域-->
+    <div>
+        <p>局部变量在声明的函数内可以访问。</p>
+        <p id="demo"></p>
+        <!-- 局部变量,只能在函数内部访问-->
+    </div>
+    <script>
+        myFunction();
+        document.getElementById("demo").innerHTML =
+            "我可以显示 " + typeof carName;
+
+        function myFunction() {
+            var carName = "Volvo";
+        }
+    </script>
+</body>
+
+</html>
