@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="demon"></p>
+    <p>=== 为绝对相等，即数据类型与值都必须相等。</p>
+    <script>
+        var txt = "HelloWorld!";
+        document.write("<p>" + txt.length + "</p>");
+        var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.write("<p>" + txt.length + "</p>");
+
+        var x = "Jasdefwef";
+        var y = new String("sddfrg")
+        document.getElementById("demon").innerHTML = x === y;
+    </script>
+    <script src="./js/2.js"></script>
+</body>
+
+</html>
