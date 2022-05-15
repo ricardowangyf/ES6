@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 方法一
+        const test = 'wangyufei'
+        console.log('判断声明变量类型： ' + typeof test)
+        console.log('使用split方法分割: ' + test.split(''));
+
+        // 方法二
+        const str = 'wangyufei'
+        console.log('方法二打印出来的内容: ' + str.slice(0));
+
+        // 方法三
+        const str1 = 'wangyufei'
+        console.log('使用charAt提取某个特定参数: ' + str1.charAt(0))
+        console.log('使用charAt提取某个特定参数: ' + str1.charAt(1))
+        console.log('使用charAt提取某个特定参数: ' + str1.charAt(2))
+        console.log('使用charAt提取某个特定参数: ' + str1.charAt(3))
+        console.log('使用charAt提取某个特定参数: ' + str1.charAt(4))
+        console.log('使用charAt提取某个特定参数: ' + str1.charAt(5))
+        console.log('使用charAt提取某个特定参数: ' + str1.charAt(6))
+
+
+        // 方法四
+        var strabc = 'wangyufei';
+        var arr = str.split(',');
+        for (var i = 0; i < arr.length; i++) {
+            document.write(arr[i]);
+            document.write('<br/>');
+        }
+        console.log(arr)
+    </script>
+</body>
+
+</html>
