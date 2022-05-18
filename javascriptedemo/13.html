@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>点击按钮循环代码5次。</p>
+        <button onclick="aaaaaa()">点击这里</button>
+        <p id="demoaaa"></p>
+        <!-- // Statement 1 在循环开始之前设置变量(var i = 0)。
+        // Statement 2 定义循环运行的条件（ i 必须小于 5）。
+        // Statement 3 在每次代码块已被执行后增加一个值(i++)。 -->
+    </div>
+    <hr/>
+    <div>
+        <p id="cars"></p>
+        <!-- // 您可以在语句1中初始化任意（或者多个)值 -->
+    </div>
+    <hr/>
+    <div>
+        <p id="racs"></p>
+        <!-- 省略语句3 -->
+    </div>
+    <hr/>
+    <div>
+        <p>点击下面的按钮，循环遍历对象 "person" 的属性。</p>
+        <button onclick="myFunction()">点击这里</button>
+        <p id="awfegaweg"></p>
+    </div>
+    <script>
+        function aaaaaa() {
+            var x = "";
+            for (var i = 0; i < 5; i++) {
+                x = x + "该数字为 " + i + "<br/>";
+            }
+            document.getElementById("demoaaa").innerHTML = x;
+        }
+        // Statement 1 在循环开始之前设置变量(var i = 0)。
+        // Statement 2 定义循环运行的条件（ i 必须小于 5）。
+        // Statement 3 在每次代码块已被执行后增加一个值(i++)。
+
+
+        cars = ["BMW", "Volvo", "Saab", "Ford"];
+        for (var i = 0, l = cars.length; i < l; i++) {
+            document.getElementById("cars").innerHTML = cars
+        }
+        // 您可以在语句1中初始化任意（或者多个)值
+
+        racs = ["BMW", "Volvo", "Saab", "Ford"];
+        var i = 2,
+            len = cars.length;
+        for (; i < len; i++) {
+            document.getElementById("racs").innerHTML = racs[i]
+        }
+        // 省略语句3
+
+
+        function myFunction() {
+            var x;
+            var txt = "";
+            var person = {
+                fname: "Bill",
+                lname: "Gates",
+                age: 56
+            };
+            for (x in person) {
+                txt = txt + person[x];
+            }
+            document.getElementById("awfegaweg").innerHTML = txt;
+        }
+    </script>
+
+</body>
+
+</html>
