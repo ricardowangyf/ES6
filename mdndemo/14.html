@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 2, 3, 4];
+        var a = arr.map(x => [x * 2]);
+        console.log('map得到的结果:  ', a)
+
+        var b = arr.flatMap(x => [x * 2]);
+        console.log('flatMap得到的结果: ', b)
+
+
+        let aar = ["it's Sunny in", " ", "California"];
+
+        let aa = aar.map(x => x.split(" "));
+        console.log('--->', aa)
+
+        let bb = aar.flatMap(x => x.split(" "));
+        console.log('--------->', bb)
+    </script>
+</body>
+
+</html>
