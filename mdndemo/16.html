@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('类似数组或可迭代对象创建一个新的，浅拷贝的数组实例: ', Array.from('wangyufei'));
+        console.log('数组实例:  ', Array.from([1, 2, 3], x => x + x));
+
+
+        // 从String生成数组
+        console.log('从String生成数组: ', Array.from('foo'))
+
+        // 从Set生成数组
+        const set = new Set(['foo', 'bar', 'baz', 'foo']);
+        console.log('从Set生成数组: ', Array.from('foo'))
+
+        // 从Map生成数组
+        const map = new Map([
+            [1, 2],
+            [2, 4],
+            [4, 8]
+        ]);
+        console.log('从Map生成数组: ', Array.from(map))
+
+        //从Map生成数组
+        const mapper = new Map([
+            ['1', 'a'],
+            ['2', 'b']
+        ]);
+        console.log('从Map生成数组(提取数字):  ', Array.from(mapper.keys()))
+        console.log('从Map生成数组(提取英文字母):', Array.from(mapper.values()))
+
+
+        // 从类数组对象（arguments）生成数组
+
+        function f() {
+            return Array.from(arguments);
+        }
+        f(1, 2, 3);
+        console.log(f)
+    </script>
+</body>
+
+</html>
