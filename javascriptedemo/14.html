@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>点击按钮，测试带有 break 语句的循环。</p>
+        <button onclick="breakxunhuan()">按钮1</button>
+        <p id="demo"></p>
+        <!-- break语句 -->
+    </div>
+    <hr/>
+    <div>
+        <p>点击按钮执行循环,循环跳过i=3的步骤</p>
+        <button onclick="xunhuantiaoguo()">按钮2</button>
+        <p id="demoa"></p>
+    </div>
+    <hr/>
+    <div>
+
+    </div>
+    <script>
+        function breakxunhuan() {
+            var x = "",
+                i = 0;
+            for (i = 0; i < 10; i++) {
+                if (i == 3) {
+                    break;
+                }
+                x = x + "该数字为 " + i + "<br>";
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+        // break语句
+
+        function xunhuantiaoguo() {
+            var x = " ",
+                i = 0;
+            for (i = 0; i < 10; i++) {
+                if (i == 3) {
+                    continue;
+                }
+                x = x + "该数字为 " + i + "<br>"
+            }
+            document.getElementById("demoa").innerHTML = x;
+        }
+        // continue中断循环中的迭代 如果出现了指定的条件 然后继续循环中的下一个迭代
+
+        aaaaaa = ["BMW", "Volvo", "Saab", "Ford"];
+        list: {
+            document.write(aaaaaa[0] + "<br>");
+            document.write(aaaaaa[1] + "<br>");
+            document.write(aaaaaa[2] + "<br>");
+            break list;
+            document.write(aaaaaa[3] + "<br>");
+            document.write(aaaaaa[4] + "<br>");
+            document.write(aaaaaa[5] + "<br>");
+        }
+    </script>
+    <style>
+        button {
+            background-color: #409eff;
+            border-color: #409eff;
+            cursor: pointer;
+            border: 1px solid #dcdfe6;
+            color: #fff;
+            padding: 8px 23px;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+    </style>
+</body>
+
+</html>
