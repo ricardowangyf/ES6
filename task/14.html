@@ -11,7 +11,7 @@
 <body>
     <div>
         <p>如果时间早于24:00,会获得问候 "Good day"。</p>
-        <button onclick="myFunction()">点击这里</button>
+        <button onclick="Good()">点击这里</button>
         <p id="demoa"></p>
         <!-- 时间小于24点时,点击按钮出现GoodDay -->
     </div>
@@ -24,7 +24,7 @@
         <p id="demos"></p>
     </div>
     <script>
-        function myFunction() {
+        function Good() {
             var x = " ";
             var time = new Date().getHours();
             if (time < 20) {
