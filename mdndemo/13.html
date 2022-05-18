@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [1, 2, 3, [4, 5]];
+
+        console.log(arr.flat());
+
+
+        // 扁平化嵌套数组
+        const bbb = [1, 2, [3, 4, 5]];
+        bbb.flat()
+        console.log('扁平化嵌套数组: ' + bbb.flat());
+
+        var ccc = [1, 2, [3, 4, [5, 6]]];
+        ccc.flat();
+        console.log('父套子套子： ' + ccc.flat())
+
+
+        //扁平化与数组空项目
+        var ccca = [1, 2, , , 3, 4];
+        ccca.flat();
+        console.log('以上：  ' + ccca.flat());
+        // 该方法能移除空数组
+
+
+        const array1 = [1, 2, 3, 4];
+
+        // 0 + 1 + 2 + 3 + 4
+        const initialValue = 0;
+        const sumWithInitial = array1.reduce(
+            (previousValue, currentValue) => {
+                console.log('---previousValue----->', previousValue)
+                console.log('---currentValue----->', currentValue)
+
+                return previousValue + currentValue
+
+            },
+            initialValue
+        );
+
+        console.log(sumWithInitial);
+
+
+        // 其他方法
+        var ccc = [1, 2, 3, [4, 5]];
+        ccc.flat();
+        console.log('---acc---->', ccc)
+
+        var a = ccc.reduce((acc, val) => {
+            console.log('---acc---->', acc)
+            console.log('---val---->', val)
+            return acc.concat(val)
+        }, [])
+        console.log('aaaa;  ', a)
+    </script>
+</body>
+
+</html>
