@@ -34,8 +34,8 @@
             ['1', 'a'],
             ['2', 'b']
         ]);
-        console.log('从Map生成数组(提取数字):  ', Array.from(mapper.keys()))
-        console.log('从Map生成数组(提取英文字母):', Array.from(mapper.values()))
+        console.log('从Map生成数组(keys):  ', Array.from(mapper.keys()))
+        console.log('从Map生成数组(values):', Array.from(mapper.values()))
 
 
         // 从类数组对象（arguments）生成数组
@@ -44,7 +44,6 @@
             return Array.from(arguments);
         }
         f(1, 2, 3);
-        console.log(f)
     </script>
 </body>
 
