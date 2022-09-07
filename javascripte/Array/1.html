@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <html>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+    <!-- at() 方法接收一个整数值并返回该索引的项目，允许正数和负数。负整数从数组中的最后一个项目开始倒数。 -->
+    </html>
+    <script>
+        const array1 = [5, 12, 8, 130, 44];
+        //声明一个const常量名称为array1赋值内容 :[5, 12, 8, 130, 44]
+        
+        let index = 2;
+        //声明一个let变量名称为Index,赋值为2
+
+        console.log(`Using an index of ${index} the item returned is ${array1.at(index)}`);
+        //打印其中index（在上一句代码中赋值index=2,那么在这个代码块中index的值为）,那么输出的值为2；后方array1中（array1在之前也赋值过内容为:[5, 12, 8, 130, 44]）,其中使用了at()函数方法，在里面添加了index变量
+
+
+
+
+        const cart = ['apple', 'banana', 'pear'];
+        //声明一个cart常量,名称为cart,并赋值:['apple', 'banana', 'pear']
+        function returnLast(cart) {
+            //在此处写了一个函数方法，名称为returnLast，并且给他参数:arr
+            return cart.at(-1);
+            //返回cart数组中最后一个参数
+        }
+        const item1 = returnLast(cart);
+        //声明一个常量名称为item1，并为他赋值上面函数方法returnLast(cart)
+        console.log('--------------------->',item1); 
+        //输出在控制台
+        document.getElementById('demo').innerHTML = item1
+        //显示在页面
+    </script>
+</body>
+</html>
