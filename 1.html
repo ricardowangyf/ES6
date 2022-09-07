@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //=> wang yu fei 2022
+        //=> Wang Yu Fei 2022
+        //=> ['wang', 'yu', 'fei', '2022']、
+        // var arr1 = ['yu', 'wang', 'fei', '2022'];
+        // console.log(arr1.copyWithin(1, 0, 3, 4));
+
+        // var a = ['yu', 'wang', 'fei', '2022'];
+        // var s = a.join(" ");
+        // var a1 = s[0]
+        // var a2 = s[1]
+        // var newarr = s;
+        // newarr[0] = a2
+        // newarr[1] = a1
+
+        // console.log(s);
+
+        var arr = ['yu', 'wang', 'fei', '2022'];
+        // 交换第三个和第四个元素
+        // x < y
+        var x = 1,
+            y = 2
+        arr.splice(x - 1, 1, ...arr.splice(y - 1, 1, arr[x - 1]))
+        console.log(arr) // ['wang', 'yu', 'fei', '2022']
+        console.log(arr.splice(y - 1, 1, arr[x - 1]))
+
+
+        const name = ['yu', 'wang', 'fei', '2022'];
+        var a1 = name[0]
+        var a2 = name[1]
+        var newarr = name;
+        newarr[0] = a2
+        newarr[1] = a1
+
+        var a = ['yu', 'wang', 'fei', '2022'];
+        var s = a.join(" ");
+        var a1 = s[0]
+        var a2 = s[1]
+        var newarr = s;
+        newarr[0] = a2
+        newarr[1] = a1
+
+        // const aa = newarr.map(str => shouzimudaxie(str))
+
+
+        function capitalize(ss) {
+            return ss.charAt().toLocaleUpperCase() + ss.substring(1, ss.length)
+        }
+
+        console.log(s)
+    </script>
+</body>
