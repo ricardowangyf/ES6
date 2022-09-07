@@ -9,28 +9,29 @@
 <body>
     <p id="demo"></p>
     <p id="demo1"></p>
+    <p id="demo3"></p>
+
     <script>
         const array = ['a','b','c'];
-        //声明一个array常量并赋值['a','b','c']
         const array2 = ['1','2','3'];
-        //声明一个array2常量并赋值['1','2','3']
         const array3 = array.concat(array2);
-        //声明一个array3常量并在其中写concat()方法合并两个数组
         console.log('--------->',array3)
-        //打印输出在控制台
         document.getElementById('demo').innerHTML = array3
-        //把最后结果显示在页面上
 
 
         const num1 = [[1],[2],[3],[4]];
-        //声明一个常量名称为num1并为其赋值嵌套数组[[1],[2],[3],[4]]
         const num2 = [2, [3]];
-        //声明一个常量名称为num2并为其赋值嵌套数组[2, [3]]
         const numbers = num1.concat(num2);
-        //声明一个常量名称为numbers并为其赋值:num1使用了concat()方法，并在这个方法中添加num2数组
         console.log('----------->',numbers);
-        //打印输出到控制台
         document.getElementById('demo1').innerHTML = numbers
+
+
+        var aaa = ['w','a','n','g'];
+        var ccc = ['y','u'];
+        var ttt = ['f','e','i']
+        var bbb = aaa.concat(ccc,ttt)
+        console.log('----------->',bbb)
+        document.getElementById('demo3').innerHTML = bbb
     </script>
 </body>
 </html>
