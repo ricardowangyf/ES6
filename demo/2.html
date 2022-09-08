@@ -9,8 +9,16 @@
 <body>
     <p>js能够改变HTML属性值。</p>
     <p>在本例中js改变了图像的src属性值。</p>
-    <button onclick="document.getElementById('myImage').src='./img/light.gif'">开灯</button>
+    <button onclick="light()">开灯</button>
     <img id="myImage" border="0" src="./img/light.gif" style="text-align:center;">
-    <button onclick="document.getElementById('myImage').src='./img/bulboff.gif'">关灯</button>
+    <button onclick="guandeng()">关灯</button>
+    <script>
+        function light(){
+            document.getElementById('myImage').src='./img/light.gif'
+        }
+        function guandeng(){
+            document.getElementById('myImage').src='./img/bulboff.gif'
+        }
+    </script>
 </body>
 </html>
