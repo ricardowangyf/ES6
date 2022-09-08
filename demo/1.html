@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div>
+    <h2>js能做什么</h2>
+    <h1>js能接受单引号和双引号</h1>
+    <p id="demo">js 能够改变 HTML 内容。</p>
+    <button onclick="button()">按钮</button>
+  </div>
+  <div>
+    <p id="demo1">JavaScript 能够改变 HTML 内容。</p>
+    <button onclick="button1()">按钮2</button>
+  </div>
+    <script>
+        function button(){
+            document.getElementById('demo').innerHTML = "Hello JavaScript!"
+        }
+        function button1(){
+            document.getElementById('demo1').innerHTML = '单引号'
+        }
+    </script>
+</body>
+</html>
