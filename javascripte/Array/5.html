@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p id="demo"></p>
+    </div>
+    <script>
+        const aaa = (aaaa) => aaaa < 40;
+        const bbb = [1, 30, 39, 29, 10, 13];
+        const aa = bbb.every(aaa) 
+        console.log('--------->',aa);
+
+        const array = [12, 54, 18, 130, 44];
+        function isBigEnough(element, index, array){
+            return element >= 10;
+        }
+        const array1 = array.every(isBigEnough)
+        console.log('-------------->',array1)
+        
+
+
+        const arraybbb = [12, 5, 8, 130, 44];
+        function isBigEnough(element, index, array){
+            return element >= 10;
+        }
+        const arrayaaaa = arraybbb.every(isBigEnough)
+        console.log('-------------->',arrayaaaa)
+    </script>
+</body>
+
+</html>
