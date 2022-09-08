@@ -24,35 +24,117 @@
         <p id="demo"></p>
         <!-- JS字面量 书写混合值最重要的规则是:写数值有无小数点均可 -->
     </div>
-
     <hr />
 
     <div>
         <h2>JS字符串</h2>
-        <p>字符串可由双引号或单引号包围。</p>
+        <p>字符串可由单引号包围。</p>
         <p id="demo1"></p>
         <!-- JS字面量 字符串是文本，由双引号或单引号包围 -->
     </div>
-
     <hr />
 
     <div>
         <h2>JS字符串</h2>
-        <p>字符串可由双引号或单引号包围。</p>
+        <p>字符串可由双引号包围。</p>
         <p id="demo2"></p>
         <!-- JS字面量 字符串是文本，由双引号或单引号包围 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS变量</h2>
+        <p>在本例中,x被定义为变量。然后x被赋值: </p>
+        <p id="demo3"></p>
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS运算符</h2>
+        <p>JS使用算数运算符来计算值(类似代数).</p>
+        <p id="demo4"></p>
+        <!-- JS运算符JS使用算数运算符(+ - * /)来计算值 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS赋值</h2>
+        <p>JS中,=运算符用于向变量赋值。</p>
+        <p id="demo5"></p>
+        <!-- JS使用赋值运算符(=)向变量赋值 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS表达式</h2>
+        <p>表达式计算为值</p>
+        <p id="demo6"></p>
+        <!-- JS表达式 表达式是值,变量和运算符的组合,计算结果是值 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS表达式</h2>
+        <p>表达式计算为值。</p>
+        <p id="demo7"></p>
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS表达式</h2>
+        <p>表达式计算为值。</p>
+        <p id="demo8"></p>
+    </div>
+    <hr />
+
+    <div>
+        <h2>var 关键词创建变量</h2>
+        <p id="demo9"></p>
     </div>
     <script>
         document.getElementById("demo").innerHTML = 15.90;
         //JS字面量
         //书写混合值最重要的规则是:写数值有无小数点均可
 
-
         document.getElementById("demo1").innerHTML = 'Bill Gates';
         //JS字面量
         //字符串是文本，由双引号或单引号包围
 
         document.getElementById("demo2").innerHTML = "Bill Gates";
+        //JS字面量 
+        //字符串是文本，由双引号或单引号包围
+
+        var x;
+        x = 7;
+        document.getElementById("demo3").innerHTML = x;
+        //在编程语言中,变量用于存储数据值;JS使用 var 关键词来声明变量; =号用于为变量赋值
+
+        document.getElementById("demo4").innerHTML = (7 + 8) * 10;
+        //JS运算符
+        //JS使用算数运算符(+ - * /)来计算值
+
+        var x, y;
+        x = 7;
+        y = 8;
+        document.getElementById("demo5").innerHTML = x + y;
+        //JS使用赋值运算符(=)向变量赋值
+
+        document.getElementById("demo6").innerHTML = 6 * 10;
+        //JS表达式
+        //表达式是值,变量和运算符的组合,计算结果是值
+
+        var x;
+        x = 6;
+        document.getElementById("demo7").innerHTML = x * 10;
+        // 表达式也可包含变量值
+
+        document.getElementById("demo8").innerHTML = "Bill" + " " + "Gates";
+        // 值可以是多种类型，比如数值和字符串。
+
+        var x, y;
+        x = 7 + 8;
+        y = x * 10;
+        document.getElementById("demo9").innerHTML = y;
     </script>
 </body>
 
