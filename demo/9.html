@@ -1,24 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-<p>
-    <b>js程序</b> 
-    是一系列由计算机执行的
-    <b>语句</b>
-</p>
-<p id="demo"></p>
-<script>
-    var x, y, z;
-    x = 22;   
-    y = 11;       
-    z = x + y;
-    document.getElementById("demo").innerHTML ="z 的值是" + z + "。";
+    <div>
+        <p>
+            <b>js程序</b>
+            是一系列由计算机执行的
+            <b>语句</b>
+            <!-- JavaScript 语句是由 web 浏览器“执行”的“指令” -->
+        <p id="demo"></p>
+        </p>
+    </div>
+    <hr>
+    <div>
+        <p id="demo1"></p>
+    </div>
+    <hr>
+    <div>
+        <p>在HTML中,JS语句由浏览器执行。</p>
+        <p id="demo2"></p>
+    </div>
+    <hr>
+    <div>
+        <p>一行允许多条语句。</p>
+        <p id="demo3"></p>
+    </div>
+    <script>
+        var x, y, z;
+        x = 22;
+        y = 11;
+        z = x + y;
+        document.getElementById("demo").innerHTML = "z 的值是" + z + "。";
+        //JavaScript 语句是由 web 浏览器“执行”的“指令”
+
+        document.getElementById("demo1").innerHTML = "Hello Kitty.";
+        // JavaScript 语句由以下构成：值、运算符、表达式、关键词和注释。
+
+        var a, b, c;
+        a = 5;
+        b = 6;
+        c = a + b;
+        document.getElementById("demo2").innerHTML = c;
+        //分号分隔 JavaScript 语句
+
+
+        var a, b, c;
+        a = 5; b = 6; c = a + b;
+        document.getElementById("demo3").innerHTML = c;
+        //如果有分号分隔，允许在同一行写多条语句
     </script>
+    <style>
+        hr {
+            border: 3px solid #66DD00;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 34%;
+        }
+    </style>
 </body>
-</html> 
+
+</html>
