@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr {
+            border: 3px solid #66DD00;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 34%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 id="myH"></h1>
+        <p id="myP"></p>
+        <!-- 本例在每条代码行之前使用单行注释 -->
+    </div>
+    <hr />
+    <div>
+        <h2>JS注释</h2>
+        <p id="demo"></p>
+        <!-- 每行结尾处使用了单行注释来解释代码 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1 id="myh"></h1>
+        <p id="myp"></p>
+        <!-- 使用多行注释（注释块）来解释代码 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1 id="demo1"></h1>
+        <p id="demo2"></p>
+        <p>// 开头的代码行不会被执行。</p>
+        <!-- 使用 // 来阻止代码行的执行 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS注释</h2>
+        <h1 id="demo3"></h1>
+        <!-- <p id="myP"></p> -->
+    </div>
+    <script>
+        // 改变标题：
+        document.getElementById("myH").innerHTML = "JS注释";
+        // 改变段落：
+        document.getElementById("myP").innerHTML = "XXXXXX";
+        // 本例在每条代码行之前使用单行注释
+
+
+        var x = 5;      // 声明 x，然后为其赋值 5
+        var y = x + 2;  // 声明 y，然后为其赋值 x + 2 
+        // 把 y 写入 demo
+        document.getElementById("demo").innerHTML = y;
+        //每行结尾处使用了单行注释来解释代码
+
+        /*
+        下面的代码会改变
+        id = "myH" 的标题
+        以及 id = "myp" 的段落
+        */
+        document.getElementById("myh").innerHTML = "JS注释";
+        document.getElementById("myp").innerHTML = "段落。";
+        // 使用多行注释（注释块）来解释代码
+
+        //document.getElementById("myH").innerHTML = "我的首页";
+        document.getElementById("demo1").innerHTML = "段落。";
+        // 使用 `//` 来阻止代码行的执行
+
+        /*
+        document.getElementById("myH").innerHTML = "欢迎访问我的首页";
+        document.getElementById("myP").innerHTML = "这是我的第一个段落。";
+        */
+        document.getElementById("demo3").innerHTML = "注释块不会被执行。";
+    </script>
+</body>
+
+</html>
