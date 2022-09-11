@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr {
+            border: 3px solid #66DD00;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 34%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>JS变量</h1>
+        <p>在本例中,x / y以及z都是变量。</p>
+        <p id="demo"></p>
+        <!-- x、y 和 z 是变量 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS变量</h1>
+        <p id="demo1"></p>
+        <!-- price1、price2 以及 total 是变量 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS变量</h1>
+        <p>字符串用引号包围。</p>
+        <p>数值不用引号包围。</p>
+        <p id="demo2"></p>
+        <!-- 字符串被包围在双引号或单引号中。数值不用引号。如果把数值放在引号中，会被视作文本字符串 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS变量</h1>
+        <p>创建一个变量,向其赋值,然后显示它：</p>
+        <p id="demo3"></p>
+        <!-- 创建了名为carName的变量,并向其赋值"porsche",我们在id="demo"的HTML段落中“输出”该值 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS变量</h1>
+        <p>您可以在一条语句中声明许多变量。</p>
+        <p id="demo4"></p>
+        <!-- 以var作为语句的开头,并以逗号分隔变量 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS变量</h1>
+        <p>您可以在一条语句中声明多个变量。</p>
+        <p id="demo5"></p>
+        <!-- 声明可横跨多行 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS变量</h1>
+        <p>如果变量声明时没有赋值,那么其值是undefined。</p>
+        <p id="demo6"></p>
+        <!-- 不带有值的变量,它的值将是undefined -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS变量</h1>
+        <p>如果您再次声明某个JS变量,那么它的值不会丢失。</p>
+        <p id="demo7"></p>
+        <!-- 如果再次声明某个JS变量,将不会丢它的值 -->
+    </div>
+    <hr />
+    <div>
+        <h1>JS变量</h1>
+        <p>3+5+8相加的结果:</p>
+        <p id="demo8"></p>
+        <!-- 能够通过JS变量进行算术运算,使用=和+之类的运算符 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS变量</h1>
+        <p>相加"Bill" + " " + "Gates" 的结果是：</p>
+        <p id="demo9"></p>
+        <!-- 字符串也可以使用加号,但是字符串将被级联 -->
+    </div>
+    <script>
+        var x = 7;
+        var y = 8;
+        var z = x + y;
+        document.getElementById("demo").innerHTML = "z 的值是：" + z;
+        //x、y 和 z 是变量
+
+        var price1 = 7;
+        var price2 = 8;
+        var price3 = 12;
+        var total = price1 + price2 + price3;
+        document.getElementById("demo1").innerHTML = "总计：" + total;
+        //price1、price2 以及 total 是变量
+
+        var pi = 3.14;
+        var person = 'xxxxx';
+        var answer = "xxxxxxxxxxxxxx";
+        document.getElementById("demo2").innerHTML = pi + "<br>" + person + "<br>" + answer;
+        //字符串被包围在双引号或单引号中。数值不用引号。如果把数值放在引号中，会被视作文本字符串
+
+        var carName = "xxxx";
+        document.getElementById("demo3").innerHTML = carName;
+        //创建了名为carName的变量,并向其赋值"porsche",我们在id="demo"的HTML段落中“输出”该值
+
+        var person = 'Denny', carName = "Stive", priceN = 15000000;
+        document.getElementById("demo4").innerHTML = carName;
+        //以var作为语句的开头,并以逗号分隔变量
+
+        var person = 'Bane',
+            carName = 'porsche',
+            price = 12312312312312321;
+        document.getElementById("demo5").innerHTML = carName;
+        //声明可横跨多行
+
+        var carName;
+        document.getElementById("demo6").innerHTML = carName;
+        //不带有值的变量,它的值将是undefined
+
+        var carName = 'aaaasdawg';
+        var carName;
+        document.getElementById("demo7").innerHTML = carName;
+        //如果再次声明某个JS变量,将不会丢它的值
+
+        var x = 3 + 5 + 8;
+        document.getElementById("demo8").innerHTML = x;
+        //能够通过JS变量进行算术运算,使用=和+之类的运算符
+
+
+        var x = "Bill" + " " + "Gates";
+        document.getElementById("demo9").innerHTML = x;
+        // 字符串也可以使用加号,但是字符串将被级联
+    </script>
+
+</body>
+
+</html>
