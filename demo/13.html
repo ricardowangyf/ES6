@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr {
+            border: 3px solid #66DD00;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 34%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>JS全局作用域</h1>
+        <p>可以从任何脚本或函数中访问全局变量。</p>
+        <p id="wasadawd"></p>
+        <!-- 全局作用域在函数之外声明的变量拥有全局作用域全局变量可以在JS程序中的任何位置访问 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS局部作用域</h1>
+        <p>myFunction()之外的carName未定义</p>
+        <p id="xxxxx"></p>
+        <p id="aaaaa"></p>
+        <!-- 局部（函数内）声明的变量拥有函数作用域 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>使用var声明变量</h1>
+        <p id="demo1"></p>
+        <!-- 使用var关键字重新声明变量会带来问题在块中重新声明变量也将重新声明块外的变量 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>使用 let 声明变量</h1>
+        <p id="demo2"></p>
+        <!-- 使用let关键字重新声明变量可以解决这个问题在块中重新声明变量不会重新声明块外的变量 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS var</h1>
+        <p id="demo3"></p>
+        <!-- 在循环中使用 var -->
+    </div>
+
+    <hr />
+    <div>
+        <h1>JS let</h1>
+        <p id="demo4"></p>
+        <!-- 循环中使用 let -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS全局变量</h1>
+        <p>在HTML中,通过
+            <b>var</b>
+            定义的全局变量会成为
+            <b>window</b>
+            变量。
+        </p>
+        <p id="demo5"></p>
+        <!-- 通过let关键词定义的全局变量不属于window对象 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JavaScript let</h1>
+        <p>在程序的任何位置都允许使用
+            <b>var</b>
+            重新声明JavaScript变量:
+        </p>
+        <p id="demo6"></p>
+        <!-- 允许在程序的任何位置使用 var 重新声明 JavaScript 变量 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JSlet</h1>
+        <p>使用
+            <b>let</b>
+            在另一个作用域或另一个块中重新声明变量是允许的:
+        </p>
+        <p id="demo7"></p>
+        <!-- 在不同的作用域或块中，通过 let 重新声明变量是允许的 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS提升</h1>
+        <p>使用
+            <b>var</b>
+            您可以在声明之前使用变量:
+        </p>
+        <p id="demo8"></p>
+    </div>
+</body>
+<script>
+    var porsche = 'porsche';
+    myFunction();
+    function myFunction() {
+        document.getElementById("wasadawd").innerHTML = "I can display" + ' ' + porsche;
+    }
+    //全局作用域在函数之外声明的变量拥有全局作用域全局变量可以在JS程序中的任何位置访问
+
+    myFunction();
+    function myFunction() {
+        var carName = 'porsche';
+        document.getElementById("xxxxx").innerHTML = typeof carName + " " + carName;
+    }
+    document.getElementById("aaaaa").innerHTML = typeof carName;
+    // 局部（函数内）声明的变量拥有函数作用域
+
+    var x = 10;
+    {
+        var x = 2;
+    }
+    document.getElementById("demo1").innerHTML = x;
+    //使用var关键字重新声明变量会带来问题在块中重新声明变量也将重新声明块外的变量
+
+    var ccccccc = 10;
+    {
+        let ccccccc = 2;
+    }
+    document.getElementById("demo2").innerHTML = ccccccc;
+    // 使用let关键字重新声明变量可以解决这个问题在块中重新声明变量不会重新声明块外的变量
+    // 10
+
+    var xxxxxxxxx = 5;
+    for (var i = 0; i < 10; i++) { }
+    document.getElementById("demo3").innerHTML = xxxxxxxxx;
+    //
+    //在循环中使用 var
+
+    let xxxxxxxxxxxxxxxxxxx = 5;
+    for (let i = 0; i < 10; i++) {
+        // 一些语句
+    }
+    document.getElementById("demo4").innerHTML = xxxxxxxxxxxxxxxxxxx;
+    // 循环中使用 let
+
+    var carName = "Audi";
+    document.getElementById("demo5").innerHTML = "我可以显示 " + window.carName;
+    // 通过let关键词定义的全局变量不属于window对象
+
+
+    var x = 2;
+    var x = 3;
+    document.getElementById("demo6").innerHTML = x;
+    // 允许在程序的任何位置使用 var 重新声明 JavaScript 变量
+
+    let ax = 2;
+    {
+        let ax = 3;
+    }
+    {
+        let ax = 4;
+    }
+    document.getElementById("demo7").innerHTML = ax;
+    // 在不同的作用域或块中，通过 let 重新声明变量是允许的
+
+    carName = "Audi";
+    document.getElementById("demo8").innerHTML = carName;
+    var carName;
+</script>
+
+</html>
