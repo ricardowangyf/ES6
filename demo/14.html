@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr {
+            border: 3px solid #66DD00;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 34%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>JS const</h2>
+        <p>无法更改原始值。</p>
+        <p id="demo"></p>
+        <!-- const定义的变量与let变量类似但不能重新赋值 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>使用const声明变量</h2>
+        <p id="demo1"></p>
+        <!-- asd在块中声明不同于在块之外声明的 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS const</h2>
+        <p>您无法更改原始值。</p>
+        <p id="demo2"></p>
+        <!-- 我们将一个原始值赋给常量就不能改变原始值 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS const</h2>
+        <p>声明常量对象不会使对象属性不可更改:</p>
+        <p id="demo3"></p>
+        <!-- 可以更改常量对象的属性 -->
+    </div>
+
+    <hr />
+
+    <div>
+        <h2>JS const</h2>
+        <p>但是你不能重新赋值一个常量对象：</p>
+        <p id="demo4"></p>
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS const</h2>
+        <p>声明常量数组不会使元素不可更改：</p>
+        <p id="demo5"></p>
+        <!-- 可以更改常量数组的元素 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS const</h2>
+        <p>您无法重新赋值常量数组：</p>
+        <p id="demo6"></p>
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS提升</h2>
+        <p>
+            使用
+            <b>var</b>
+            您可以在声明变量之前使用它:
+        </p>
+        <p id="demo7"></p>
+    </div>
+    <script>
+        try {
+            const PI = 3.141592653589793;
+            PI = 3.14;
+        }
+        catch (err) {
+            document.getElementById("demo").innerHTML = err;
+        }
+        //const定义的变量与let变量类似但不能重新赋值
+
+        var asd = 10;
+        {
+            const asd = 2;
+        }
+        document.getElementById("demo1").innerHTML = asd;
+        //asd在块中声明不同于在块之外声明的
+
+        try {
+            const PI = 3.141592663689793;
+            PI = 3.14;
+        }
+        catch (err) {
+            document.getElementById("demo2").innerHTML = err;
+        }
+        //我们将一个原始值赋给常量就不能改变原始值
+
+
+        const car = { type: "Porsche", model: "911", color: "white" }; //创建对象
+        car.color = "red"; //更改属性
+        car.owner = "Steve";  //添加属性
+        document.getElementById("demo3").innerHTML = "车主是：" + car.owner; //显示属性
+        //可以更改常量对象的属性
+
+        try {
+            const car = { type: 'porsche', model: '911', color: 'white' };
+            car = { type: 'BMW', model: 'M5', color: 'red' };
+        }
+        catch (err) {
+            document.getElementById("demo4").innerHTML = err;
+        }
+        //可以更改常量对象的属性，但无法重新为常量对象赋值
+
+        const cars = ['Audi', 'BMW', 'Porsche'];
+        cars[0] = 'Toyota';
+        cars.push('Honda');
+        document.getElementById('demo5').innerHTML = cars;
+        //可以更改常量数组的元素
+
+        try {
+            const cars = ["Saab", "Volvo", "BMW"];
+            cars = ["Toyota", "Volvo", "Audi"];
+        }
+        catch (err) {
+            document.getElementById("demo6").innerHTML = err;
+        }
+
+        carName = "Audi";
+        document.getElementById("demo7").innerHTML = carName;
+        var carName;
+    </script>
+</body>
+
+</html>
