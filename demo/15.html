@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>JS运算符</h1>
+        <p>x=7,y=8,计算z=x+y,然后显示z:</p>
+        <p id="demo"></p>
+        <!-- 变量赋值并把它们相加 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>= 运算符</h1>
+        <p id="demo1"></p>
+        <!-- 赋值运算符(=)把值赋给变量 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>+ 运算符</h1>
+        <p id="demo2"></p>
+        <!-- 加法运算符（+）对数字相加 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>* 运算符</h1>
+        <p id="demo3"></p>
+        <!-- 乘法运算符（*）对数字相乘 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>+= 运算符</h1>
+        <p id="demo4"></p>
+        <!-- 加法赋值运算符（+=）向变量添加一个值 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS运算符</h1>
+        <p>+ 运算符串联（相加）字符串。</p>
+        <p id="demo5"></p>
+        <!-- + 运算符也可用于对字符串进行相加（concatenate，级联） -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS运算符</h1>
+        <p>赋值运算符 += 串联字符串。</p>
+        <p id="demo6"></p>
+        <!-- += 赋值运算符也可用于相加（级联）字符串 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS运算符</h1>
+        <p>对数字和字符串相加，会返回字符串。</p>
+        <p id="demo7"></p>
+        <!-- 相加两个数字,将返回和,但对一个数字和一个字符串相加将返回一个字符串   -->
+    </div>
+    <script>
+        var x = 7;
+        var y = 8;
+        var z = x + y;
+        document.getElementById('demo').innerHTML = z;
+        //变量赋值并把它们相加
+
+        var x = 15;
+        document.getElementById('demo1').innerHTML = x;
+        // 赋值运算符(=)把值赋给变量
+
+        var x = 7;
+        var y = 8;
+        var z = x + y;
+        document.getElementById("demo2").innerHTML = z;
+        //加法运算符（+）对数字相加
+
+        var x = 7;
+        var y = 8;
+        var z = x * y;
+        document.getElementById("demo3").innerHTML = z;
+        //乘法运算符（*）对数字相乘
+
+        var x = 7;
+        x += 8;
+        document.getElementById('demo4').innerHTML = x;
+        // 加法赋值运算符（+=）向变量添加一个值
+
+        var txt = 'Bill';
+        var txe = 'Gates';
+        document.getElementById('demo5').innerHTML = txt + ' ' + txe;
+        // + 运算符也可用于对字符串进行相加（concatenate，级联）
+
+        text = 'Hello';
+        txt += 'Kitty';
+        document.getElementById('demo6').innerHTML = text + ' ' + txt;
+        // += 赋值运算符也可用于相加（级联）字符串
+
+        var x = 7 + 8;
+        var y = '7' + 8;
+        var z = 'Hello' + 7;
+        document.getElementById('demo7').innerHTML = x + '<br>' + y + '<br>' + z;
+        //相加两个数字,将返回和,但对一个数字和一个字符串相加将返回一个字符串  
+    </script>
+</body>
+
+</html>
