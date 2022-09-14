@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr {
+            border: 3px solid #66DD00;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 34%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>= 运算符</h1>
+        <p id="demo"></p>
+        <!-- = 赋值运算符向变量赋值 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>+= 运算符</h1>
+        <p id="demo1"></p>
+        <!-- += 赋值运算符向变量添加值 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>-= 运算符</h1>
+        <p id="demo2"></p>
+        <!-- -= 赋值运算符从变量中减去一个值 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>*= 运算符</h1>
+        <p id="demo3"></p>
+        <!-- *= 赋值运算符相乘变量 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>/= 运算符</h1>
+        <p id="demo4"></p>
+        <!-- /= 赋值运算符对变量相除 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>%= 运算符</h1>
+        <p id="demo5"></p>
+        <!-- %= 赋值运算符把余数赋值给变量 -->
+    </div>
+    <hr />
+    <script>
+        var x = 7;
+        document.getElementById("demo").innerHTML = x;
+        //=赋值运算符向变量赋值
+
+        var x = 7;
+        x += 8;
+        document.getElementById("demo1").innerHTML = x;
+        //+=赋值运算符向变量添加值
+
+        var x = 7;
+        x -= 8;
+        document.getElementById("demo2").innerHTML = x;
+        //-= 赋值运算符从变量中减去一个值
+
+        var x = 7;
+        x *= 8;
+        document.getElementById("demo3").innerHTML = x;
+        //*=赋值运算符相乘变量
+
+        var x = 7;
+        x /= 8;
+        document.getElementById("demo4").innerHTML = x;
+        // /= 赋值运算符对变量相除
+
+
+        var x = 7;
+        x %= 8;
+        document.getElementById("demo5").innerHTML = x;
+        //%= 赋值运算符把余数赋值给变量
+    </script>
+</body>
+
+</html>
