@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr {
+            border: 3px solid #66DD00;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 34%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>典型的算术运算会操作两个数(或表达式)并返回一个新的数。</p>
+        <p id="demo"></p>
+        <!-- 典型的算术运算会操作两个数值这两个数可以是字面量 -->
+    </div>
+    <hr />
+
+    <div>
+        <p>典型的算术运算会操作两个数（或表达式）并返回一个新的数。</p>
+        <p id="demo1"></p>
+        <!-- 典型的算术运算会操作两个数值这两个数可以是变量 -->
+    </div>
+    <hr />
+
+    <div>
+        <p>典型的算术运算会操作两个数（或表达式）并返回一个新的数。</p>
+        <p id="demo2"></p>
+        <!-- 典型的算术运算会操作两个数值这两个数可以是表达式 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>+运算符</h1>
+        <p id="demo3"></p>
+        <!-- 加法运算符(+)加数 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>- 运算符</h1>
+        <p id="demo4"></p>
+        <!-- 减法运算符(-)减数 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>*运算符</h1>
+        <p id="demo5"></p>
+        <!-- 乘法运算符（*）乘数 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>/ 运算符</h1>
+        <p id="demo6"></p>
+        <!-- 除法运算符（/）除数 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>%运算符</h1>
+        <p id="demo7"></p>
+        <!-- 系数运算符（%）返回除法的余数 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>++ 运算符</h1>
+        <p id="demo8"></p>
+        <!-- 递增运算符（++）对数值进行递增 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>-- 运算符</h1>
+        <p id="demo9"></p>
+        <!-- 递减运算符（--）对数值进行递减 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>** 运算符</h1>
+        <p id="demo10"></p>
+        <!-- 取幂运算符（**）将第一个操作数提升到第二个操作数的幂 -->
+    </div>
+    <hr />
+
+    <div>
+        <p>乘法的优先级高于加法。</p>
+        <p id="demo11"></p>
+        <!-- 运算符优先级描述了在算术表达式中所执行操作的顺序 -->
+    </div>
+    <hr />
+
+    <div>
+        <p>乘法优先级高于加法</p>
+        <p>但是括号的优先于乘法</p>
+        <p id="demo12"></p>
+        <!-- 通过使用括号来改变优先级 -->
+    </div>
+    <hr />
+
+    <div>
+        <p>如果多个运算符优先级相同，则从左向右计算。</p>
+        <p id="demo13"></p>
+        <!-- 当多个运算拥有相同的优先级时（比如加法和减法），对它们的计算是从左向右的 -->
+    </div>
+    <script>
+        var x = 7 + 8;
+        document.getElementById("demo").innerHTML = x;
+        //典型的算术运算会操作两个数值这两个数可以是字面量
+
+        var a = 7;
+        var b = 8;
+        var x = a + b;
+        document.getElementById("demo1").innerHTML = x;
+        //典型的算术运算会操作两个数值这两个数可以是变量
+
+        var a = 2;
+        var b = (7 + 8) * a;
+        document.getElementById("demo2").innerHTML = b;
+        //典型的算术运算会操作两个数值这两个数可以是表达式
+
+        var x = 7;
+        var y = 8;
+        var z = x + y;
+        document.getElementById("demo3").innerHTML = z;
+        //加法运算符(+)加数
+
+        var aa = 7;
+        var yyy = 8;
+        var zz = x - y;
+        document.getElementById("demo4").innerHTML = zz;
+        //减法运算符(-)减数
+
+        var x = 7;
+        var y = 8;
+        var z = x * y;
+        document.getElementById("demo5").innerHTML = z;
+        // 乘法运算符（*）乘数
+
+        var x = 7;
+        var y = 2;
+        var z = x / y;
+        document.getElementById("demo6").innerHTML = z;
+        // 除法运算符（/）除数
+
+        var x = 7;
+        var y = 2;
+        var z = x % y;
+        document.getElementById("demo7").innerHTML = z;
+        // 系数运算符（%）返回除法的余数
+
+        var x = 7;
+        x++;
+        var z = x;
+        document.getElementById("demo8").innerHTML = z;
+        // 递增运算符（++）对数值进行递增
+
+        var x = 7;
+        x--;
+        var z = x;
+        document.getElementById("demo9").innerHTML = z;
+        // 递减运算符（--）对数值进行递减
+
+        var x = 5;
+        document.getElementById("demo10").innerHTML = x ** 2;
+        // 取幂运算符（**）将第一个操作数提升到第二个操作数的幂
+
+        document.getElementById("demo11").innerHTML = 200 + 50 * 2;
+        // 运算符优先级描述了在算术表达式中所执行操作的顺序
+
+        document.getElementById("demo12").innerHTML = (200 + 50) * 2;
+        // 通过使用括号来改变优先级
+
+        document.getElementById('demo13').innerHTML = 200 + 50 - 2;
+    </script>
+</body>
+
+</html>
