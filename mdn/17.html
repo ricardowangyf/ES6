@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr1 = [1, 2, [3], [4, 5], 6, []];
+        const flattened = arr1.flatMap(num => num);
+        console.log(flattened);
+        //Array [1, 2, 3, 4, 5, 6]
+
+        var arr = [1, 2, 3, 4];
+        arr.map(x => [x * 2]);
+        const bbb = arr.flatMap(x => [[x * 2]]);
+        const aaaaaaaaa = bbb.flatMap(num => num);
+        console.log('---------->',aaaaaaaaa)
+        //[2, 4, 6, 8]
+    </script>
+</body>
+
+</html>
