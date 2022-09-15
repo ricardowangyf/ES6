@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        hr {
+            border: 3px solid #66DD00;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 34%;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,6 +50,116 @@
     </div>
     <hr />
 
+    <div>
+        <h2>JS字符串</h2>
+        <p>字符串被引号包围 您可使用单引号或双引号:</p>
+        <p id="demo4"></p>
+        <!-- 字符串被引号包围,使用单引号或双引号 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS字符串</h2>
+        <p>您可以在字符串内使用引号,只要这些引号与包围字符串的引号不匹配:</p>
+        <p id="demo5"></p>
+        <!-- 可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS数值</h2>
+        <p>写数值时用不用小数点均可</p>
+        <p id="demo6"></p>
+        <!-- 写数值时用不用小数点均可 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS数值</h2>
+        <p>超大或超小的数值可以用科学计数法来写：</p>
+        <p id="demo7"></p>
+        <!-- 超大或超小的数值可以用科学计数法来写 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS Booleans</h2>
+        <p>布尔值只有两个值:true或false</p>
+        <p id="demo8"></p>
+        <!-- 布尔值只有两个值：true 或 false -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS 数组</h2>
+        <p>数组索引基于零，这意味着第一个项目是 [0]，第二个项目是 [1]，以此类推。</p>
+        <p id="demo9"></p>
+        <!-- 声明了名为cars的数组 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS 对象</h2>
+        <p id="demo10"></p>
+        <!-- 对象属性是 name:value 对，由逗号分隔 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS typeof</h2>
+        <p>typeof 运算符返回变量或表达式的类型：</p>
+        <p id="demo11"></p>
+        <!-- typeof 运算符返回变量或表达式的类型 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS数据类型</h2>
+        <p>无值变量的值和数据类型是 <b>undefined</b>。</p>
+        <p id="demo12"></p>
+        <p id="demo13"></p>
+        <!-- 任何变量均可通过设置值为 undefined 进行清空。其类型也将是 undefined -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS数据类型</h2>
+        <p>空的字符串变量既有值也有类型。</p>
+        <p id="demo14"></p>
+        <!-- 空的字符串变量既有值也有类型 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS数据类型</h2>
+        <p>您可以通过设置值为null来清空对象:</p>
+        <p id="demo15"></p>
+        <!-- 值是 null，但是类型仍然是对象 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS数据类型</h2>
+        <p>任何变量均可通过设置值为undefined进行清空。其类型也将是undefined。</p>
+        <p id="demo16"></p>
+        <!-- 也可以通过设置值为undefined清空对象 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS数据类型</h2>
+        <p>Undefined and null are equal in value but different in type:</p>
+        <p id="demo17"></p>
+        <!-- Undefined 与 null 的值相等，但类型不相等 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS typeof</h2>
+        <p>typeof运算符把对象,数组或null返回object</p>
+        <p>typeof运算符不会把函数返回object</p>
+        <p id="demo18"></p>
+    </div>
     <script>
         var x = 911 + "Porsche";
         document.getElementById("demo").innerHTML = x;
@@ -59,6 +178,102 @@
         var x = "Bill";      // 现在 x 是字符串值
         document.getElementById("demo3").innerHTML = x;
         // JS拥有动态类型这意味着相同变量可用作不同类型
+
+        var carName1 = "Porsche 911";   // 使用双引号
+        var carName2 = 'Porsche 911';   // 使用单引号
+        document.getElementById("demo4").innerHTML =
+            carName1 + "<br>" +
+            carName2;
+        //字符串被引号包围,使用单引号或双引号
+
+        var answer1 = "It's alright";             // 双引号内的单引号
+        var answer2 = "He is called 'Bill'";    // 双引号内的单引号
+        var answer3 = 'He is called "Bill"';    // 单引号内的双引号
+
+        document.getElementById("demo5").innerHTML =
+            answer1 + "<br>" +
+            answer2 + "<br>" +
+            answer3;
+        //可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配
+
+        var x1 = 34.00;
+        var x2 = 34;
+        var x3 = 3.14;
+        document.getElementById("demo6").innerHTML = x1 + "<br>" + x2 + "<br>" + x3;
+        //写数值时用不用小数点均可
+
+        var y = 123e5;
+        var z = 123e-5;
+        document.getElementById("demo7").innerHTML = y + "<br>" + z;
+        // 超大或超小的数值可以用科学计数法来写
+
+        var x = 7;
+        var y = 7;
+        var z = 8;
+        document.getElementById("demo8").innerHTML = (x == y) + '<br>' + (x == z);
+        // 布尔值只有两个值：true 或 false
+
+        var cars = ["Porsche", "Volvo", "BMW"];
+        document.getElementById("demo9").innerHTML = cars[0];
+        // 声明了名为cars的数组
+
+        var person = {
+            firstName: "Bill",
+            lastName: "Gates",
+            age: 62,
+            eyeColor: "blue"
+        };
+        document.getElementById("demo10").innerHTML = person.firstName + " is " + person.age + " years old.";
+        //对象属性是 name:value 对，由逗号分隔
+
+        document.getElementById("demo11").innerHTML =
+            typeof 0 + "<br>" +
+            typeof 314 + "<br>" +
+            typeof 3.14 + "<br>" +
+            typeof (3) + "<br>" +
+            typeof (3 + 4)
+        typeof "" + "<br>" +
+            typeof "Bill" + "<br>" +
+            typeof "Bill Gates";
+        // typeof 运算符返回变量或表达式的类型
+
+        var car;
+        document.getElementById("demo12").innerHTML = car + "<br>" + typeof car;
+        var car = "Porsche";
+        car = undefined;
+        document.getElementById("demo13").innerHTML =
+            car + "<br>" + typeof car;
+        //任何变量均可通过设置值为 undefined 进行清空。其类型也将是 undefined
+
+        var car = "";
+        document.getElementById("demo14").innerHTML =
+            "其值是：" +
+            car + "<br>" +
+            "类型是：" + typeof car;
+        //空的字符串变量既有值也有类型
+
+        var person = { firstName: "Bill", lastName: "Gates", age: 62, eyeColor: "blue" };
+        person = null;
+        document.getElementById("demo15").innerHTML = typeof person;
+        // 值是 null，但是类型仍然是对象
+
+        var person = { firstName: "Bill", lastName: "Gates", age: 62, eyeColor: "blue" };
+        person = undefined;
+        document.getElementById("demo16").innerHTML = person;
+        //也可以通过设置值为undefined清空对象
+
+        document.getElementById("demo17").innerHTML =
+            typeof undefined + "<br>" +
+            typeof null + "<br><br>" +
+            (null === undefined) + "<br>" +
+            (null == undefined);
+        // Undefined 与 null 的值相等，但类型不相等
+
+        document.getElementById("demo18").innerHTML =
+            typeof { name: 'Bill', age: 62 } + "<br>" +
+            typeof [1, 2, 3, 4] + "<br>" +
+            typeof null + "<br>" +
+            typeof function myFunc() { };
     </script>
 </body>
 
