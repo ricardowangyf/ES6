@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>JS事件</h1>
+        <button onclick="time()">时间是？</button>
+        <p id="demo"></p>
+        <!-- onclick 属性（以及代码）被添加到 <button> 元素 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JavaScript 事件</h1>
+        <button onclick="this.innerHTML=Date()">时间是？</button>
+    </div>
+    <script>
+        function time() {
+            document.getElementById('demo').innerHTML = Date()
+        }
+        // onclick 属性（以及代码）被添加到 <button> 元素
+
+    </script>
+</body>
+
+</html>
