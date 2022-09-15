@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr {
+            border: 3px solid #66DD00;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 34%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>JS函数</h2>
+        <p>本例调用了一个执行计算的函数，然后返回结果：</p>
+        <p id="demo"></p>
+        <!-- 函数返回 p1 和 p2 的乘积 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS函数</h2>
+        <p>本例调用了一个执行计算的函数,然后返回结果:</p>
+        <p id="demo1"></p>
+        <!-- 计算两个数的乘积，并返回结果 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS函数</h2>
+        <p>本例调用函数把华氏度转换为摄氏度：</p>
+        <p id="demo2"></p>
+        <!-- 华氏度转换为摄氏度 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS函数</h2>
+        <p>不使用 () 访问函数将返回函数声明而不是函数结果：</p>
+        <p id="demo3"></p>
+        <!-- 访问没有 () 的函数将返回函数定义 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS函数</h2>
+        <p id="demo4"></p>
+        <!-- 能够把函数当做变量值直接使用 -->
+    </div>
+    <hr />
+
+    <div>
+        <h2>JS函数</h2>
+        <p>myFunction()之外的carName未定义。</p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <!-- 局部变量只能在函数内访问 -->
+    </div>
+    <script>
+        function myFunction(p1, p2) {
+            return p1 * p2;
+        }
+        document.getElementById("demo").innerHTML = myFunction(7, 8);
+        // 函数返回 p1 和 p2 的乘积
+
+        var x = myFunction(7, 8);
+        document.getElementById("demo1").innerHTML = x;
+        function myFunction(a, b) {
+            return a * b;
+        }
+        //计算两个数的乘积，并返回结果
+
+        function toCelsius(f) {
+            return (5 / 9) * (f - 32);
+        }
+        document.getElementById("demo2").innerHTML = toCelsius(86);
+        // 华氏度转换为摄氏度
+
+        function toCelsius(f) {
+            return (5 / 9) * (f - 32);
+        }
+        document.getElementById("demo3").innerHTML = toCelsius;
+        //访问没有 () 的函数将返回函数定义
+
+        document.getElementById("demo4").innerHTML =
+            "温度是：" + toCelsius(86) + " 摄氏度。";
+        function toCelsius(fahrenheit) {
+            return (5 / 9) * (fahrenheit - 32);
+        }
+        // 能够把函数当做变量值直接使用
+
+        myFunction();
+        function myFunction() {
+            var carName = "Volvo";
+            document.getElementById("demo5").innerHTML =
+                typeof carName + " " + carName;
+        }
+        document.getElementById("demo6").innerHTML =
+            typeof carName;
+        // 局部变量只能在函数内访问
+    </script>
+
+</body>
+
+</html>
