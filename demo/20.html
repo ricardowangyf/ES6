@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr {
+            border: 3px solid #66DD00;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 34%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>JS变量</h2>
+        <p id="demo"></p>
+        <!--一个单一值(porsche)赋给名为car的变量 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS对象</h1>
+        <p id="demo1"></p>
+        <!-- 多个值(porsche,911, white)赋给名为car的变量 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS对象创建</h1>
+        <p id="demo2"></p>
+        <!--定义(创建)了一个JS对象 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS对象创建</h1>
+        <p id="demo3"></p>
+        <!-- 空格和折行都是允许的。对象定义可横跨多行 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS对象属性</h1>
+        <p>有两种不同的方法来访问对象属性。</p>
+        <p>您可以使用person.property或person["property"]</p>
+        <p id="demo4"></p>
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS对象属性</h1>
+        <p>有两种不同的方法来访问对象属性。</p>
+        <p>您可以使用person.property或person["property"]</p>
+        <p id="demo5"></p>
+    </div>
+    <hr />
+
+    <div>
+        <h1>JavaScript 对象方法</h1>
+        <p>对象方法是一种函数定义，存储为属性值。</p>
+        <p id="demo6"></p>
+        <!-- 对象方法是一种函数定义，存储为属性值 -->
+    </div>
+    <hr />
+
+    <div>
+        <h1>JS对象方法</h1>
+        <p>如果您不使用()访问对象,则返回函数定义:</p>
+        <p id="demo7"></p>
+    </div>
+    <script>
+        var car = "porsche";
+        document.getElementById("demo").innerHTML = car;
+        //一个单一值(porsche)赋给名为car的变量
+
+        var car = { type: "porsche", model: "911", color: "white" };
+        document.getElementById("demo1").innerHTML = car.type;
+        //多个值(porsche, 911, white)赋给名为car的变量
+
+        var person = { firstName: "Bill", lastName: "Gates", age: 62, eyeColor: "blue" };
+        document.getElementById("demo2").innerHTML =
+            person.firstName + " 已经 " + person.age + " 岁了。";
+        //定义(创建)了一个JS对象
+
+        var person = {
+            firstName: "Bill",
+            lastName: "Gates",
+            age: 62,
+            eyeColor: "blue"
+        };
+        document.getElementById("demo3").innerHTML = person.firstName + " 已经 " + person.age + " 岁了。";
+        //空格和折行都是允许的。对象定义可横跨多行
+
+        var person = {
+            firstName: "Bill",
+            lastName: "Gates",
+            id: 12345
+        };
+        document.getElementById("demo4").innerHTML = person.firstName + " " + person.lastName;
+
+        var person = {
+            firstName: "Bill",
+            lastName: "Gates",
+            id: 12345
+        };
+        document.getElementById("demo5").innerHTML = person["firstName"] + " " + person["lastName"];
+
+        // 创建对象：
+        var person = {
+            firstName: "Bill",
+            lastName: "Gates",
+            id: 12345,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.getElementById("demo6").innerHTML = person.fullName();
+        // 对象方法是一种函数定义，存储为属性值
+
+        // 创建对象：
+        var person = {
+            firstName: "Bill",
+            lastName: "Gates",
+            id: 12345,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.getElementById("demo7").innerHTML = person.fullName;
+    </script>
+
+</body>
+
+</html>
