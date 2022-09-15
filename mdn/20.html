@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const animals = ['pigs', 'goats', 'sheep'];
+
+        const count = animals.push('cows');
+        console.log(count);
+        //4
+        console.log(animals);
+        //Array["pigs", "goats", "sheep", "cows"]
+
+        animals.push('chickens', 'cats', 'dogs');
+        console.log(animals);
+        //Array["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+    </script>
+</body>
+
+</html>
