@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+        const fangfa = beasts.indexOf('ant');
+        console.log('------------>', fangfa);
+
+        const fangfa2 = beasts.indexOf('bison', 2);
+        console.log('---->', fangfa2)
+
+        const fangfathree = beasts.indexOf('giraffe');
+        console.log('--------------->', fangfathree)
+
+        const indices = [];
+        const array = ['a', 'b', 'a', 'c', 'a', 'd'];
+        const element = 'a';
+        let idx = array.indexOf(element);
+        while (idx !== -1) {
+            indices.push(idx);
+            idx = array.indexOf(element, idx + 1);
+        }
+        console.log(indices);
+        // [0, 2, 4]
+    </script>
+</body>
+
+</html>
