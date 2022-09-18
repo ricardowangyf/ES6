@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>JS模板字面量</h2>
+        <p>模板字面量使用反引号 (``) 而不是引号 ("") 来定义字符串：</p>
+        <p id="demo"></p>
+        <p>Internet Explorer 不支持模板字面量。</p>
+    </div>
+    <hr />
+    <div>
+        <h2>JS模板字面量</h2>
+        <p>模板字面量允许多行字符串：</p>
+        <p id="demo1"></p>
+        <p>Internet Explorer 不支持模板字面量。</p>
+        <!-- 模板字面量允许多行字符串 -->
+    </div>
+    <hr>
+    <div>
+        <h2>JS模板字面量</h2>
+        <p>模板字面量允许字符串中的变量：</p>
+        <p id="demo2"></p>
+        <p>Internet Explorer 不支持模板字面量。</p>
+        <!-- 模板字面量允许字符串中的变量 -->
+    </div>
+    <hr />
+    <div>
+        <h2>JS模板字面量</h2>
+        <p>模板字面量允许字符串中的表达式：</p>
+        <p id="demo3"></p>
+        <p>Internet Explorer不支持模板字面量。</p>
+        <!-- 模板字面量允许字符串中的表达式 -->
+    </div>
+    <hr />
+    <div>
+        <h2>JS模板字面量</h2>
+        <p>模板字面量允许字符串中的变量：</p>
+        <p id="demo4"></p>
+        <p>Internet Explorer不支持模板字面量。</p>
+    </div>
+</body>
+<script>
+    let text = `Hello world!`;
+    document.getElementById("demo").innerHTML = text;
+
+    let text1 =
+        `The quick
+brown fox
+jumps over
+the lazy dog`;
+    document.getElementById("demo1").innerHTML = text1;
+    //模板字面量允许多行字符串
+
+    let firstName = "Bill";
+    let lastName = "Gates";
+    let text2 = `Welcome ${firstName}, ${lastName}!`;
+    document.getElementById("demo2").innerHTML = text2;
+    //模板字面量允许字符串中的变量
+
+    let price = 10;
+    let VAT = 0.25;
+    let total = `total: ${(price * (1 + VAT)).toFixed(2)}`;
+    document.getElementById("demo3").innerHTML = total
+    //模板字面量允许字符串中的表达式
+
+    let header = "Templates Literals";
+    let tags = ["template literals", "javascript", "es6"];
+    let html = `<h2>${header}</hr><ul>`;
+    for(const x of tags){
+        html += `<li>${x}</li>`;
+    }
+    html += `</ul>`;
+    document.getElementById("demo4").innerHTML = html;
+</script>
+
+</html>
