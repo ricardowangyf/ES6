@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>JS 数组方法</h1>
+        <h2>toString()</h2>
+        <p>toString()方法以逗号分隔的字符串返回数组：</p>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组方法</h1>
+        <h2>join()</h2>
+        <p>join() 方法将数组元素连接成一个字符串。</p>
+        <p>在这个例子中我们使用“*”作为元素之间的分隔符：</p>
+        <p id="demo1"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组方法</h1>
+        <h2>pop()</h2>
+        <p>pop()方法从数组中删除最后一个元素。</p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组方法</h1>
+        <h2>push()</h2>
+        <p>push() 方法将新元素追加到数组中。</p>
+        <button onclick="myFunction()">试一试</button>
+        <p id="demno5"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组方法</h1>
+        <h2>shift()</h2>
+        <p>shift() 方法删除数组的第一个元素（并将所有其他元素“移位”到左侧）：</p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组方法</h1>
+        <h2>unshift()</h2>
+        <p>unshift() 方法返回新数组的长度：</p>
+        <p id="demo8"></p>
+        <p id="demo9"></p>
+        <p id="demo10"></p>
+        <p>
+            <b>注释:</b>
+            unshift() 方法在 Internet Explorer 8 及更早版本中无法正常工作，会插入值，但返回值将是
+            <em>undefined</em>
+        </p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组方法</h1>
+        <p>使用索引号访问数组元素:</p>
+        <p id="demo11"></p>
+        <p id="demo12"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JavaScript 数组方法</h1>
+        <p>删除元素会在数组中留下未定义的孔。</p>
+        <p id="demo13"></p>
+        <p id="demo14"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组方法</h1>
+        <h2>concat()</h2>
+        <p>concat() 方法用于合并（连接）数组：</p>
+        <p id="demo15"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组方法</h1>
+        <h2>slice()</h2>
+        <p>此例从数组元素 1(“Orange”)开始切出数组的一部分:</p>
+        <p id="demo16"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组方法</h1>
+        <h2>slice()</h2>
+        <p>当给slice()方法赋予两个参数时，它从
+            <i>start</i>
+            参数中选择数组元素，直到（但不包括）
+            <i>end</i>
+            参数:
+        </p>
+        <p id="demo17"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组方法</h1>
+        <h2>toString()</h2>
+        <p>toString() 方法以逗号分隔的字符串返回数组：</p>
+        <p id="demo18"></p>
+    </div>
+</body>
+
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits.toString();
+    console.log('-------->', typeof fruits.toString())
+    // string
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = fruits.join(" * ");
+    console.log('-------->', fruits.join(" * "))
+    // Banana * Orange * Apple * Mango
+
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo3").innerHTML = fruits;
+    fruits.pop();
+    document.getElementById("demo4").innerHTML = fruits;
+    //  ['banana', 'orange']
+
+
+    var fruits, bbb;
+    fruits = ['banana', 'orange', 'apple'];
+    bbb = fruits.pop();
+    console.log('-----pop----->', fruits)
+    console.log('-----pop----->', bbb)
+    // apple
+
+    var ASDASDAS = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demno5").innerHTML = ASDASDAS;
+    function myFunction() {
+        ASDASDAS.push("Kiwi");
+        document.getElementById("demno5").innerHTML = ASDASDAS;
+    }
+
+
+    var fritus, shift;
+    fritus = ["Banana", "Orange", "Apple", "Mango"];
+    console.log('---------------------_>', fritus);
+    // ['Banana', 'Orange', 'Apple', 'Mango']
+    document.getElementById("demo6").innerHTML = fritus;
+    shift = fritus.shift();
+    document.getElementById("demo7").innerHTML = shift;
+    console.log("------------------------>", shift);
+    // Banana
+
+
+    var asdasdasdasdasdasd, unshift;
+    asdasdasdasdasdasd = ["Banana", "Orange", "Apple", "Mango"]
+    document.getElementById("demo8").innerHTML = asdasdasdasdasdasd;
+    console.log('--->', asdasdasdasdasdasd)
+    //['Banana', 'Orange', 'Apple', 'Mango']
+    document.getElementById("demo9").innerHTML = asdasdasdasdasdasd.unshift("Lemon");
+    unshift = asdasdasdasdasdasd.unshift("Lemon")
+    console.log('------------->', unshift);
+    //6
+    document.getElementById("demo10").innerHTML = asdasdasdasdasdasd;
+    console.log('------>', asdasdasdasdasdasd);
+    //['Lemon', 'Lemon', 'Banana', 'Orange', 'Apple', 'Mango']
+
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo11").innerHTML = fruits;
+    fruits[0] = "Lemon";
+    document.getElementById("demo12").innerHTML = fruits;
+    // Lemon,Orange,Apple,Mango
+
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo13").innerHTML =
+        "第一种水果是：" + fruits[0];
+    delete fruits[0];
+    document.getElementById("demo14").innerHTML =
+        "第一种水果是：" + fruits[0];
+    // 第一种水果是：Banana
+    // 第一种水果是：undefined
+
+
+    var myGirls = ["Emma", "Isabella"];
+    var myBoys = ["Jacob", "Michael", "Ethan"];
+    var myBoysasdasd = ["Jacob", "Michael", "Ethan"];
+    var myChildren = myGirls.concat(myBoys, myBoysasdasd);
+    document.getElementById("demo15").innerHTML = myChildren;
+    // Emma,Isabella,Jacob,Michael,Ethan,Jacob,Michael,Ethan
+
+
+    var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    var citrus = fruits.slice(1);
+    document.getElementById("demo16").innerHTML = fruits + "<br><br>" + citrus;
+    // Orange,Lemon,Apple,Mango
+
+
+    var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    var citrus = fruits.slice(1, 3);
+    document.getElementById("demo17").innerHTML = fruits + "<br><br>" + citrus;
+    // Orange,Lemon
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo18").innerHTML = fruits.toString();
+// Banana,Orange,Apple,Mango
+</script>
+
+</html>
