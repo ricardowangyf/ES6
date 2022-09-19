@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>JS数组排序</h1>
+        <p>sort() 方法按字母顺序对数组进行排序。</p>
+        <button onclick="myFunction()">按钮</button>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS数组排序反转</h1>
+        <p>reverse()方法反转数组中的元素。</p>
+        <p>通过组合sort()和reverse(),您可以按降序对数组进行排序。</p>
+        <button onclick="myFuncation()">按钮</button>
+        <p id="demoa"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS数组排序</h1>
+        <p>单击按钮以升序对数组进行排序。</p>
+        <button onclick="asdasdasdasda()">按钮</button>
+        <p id="demob"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS数组排序</h1>
+        <p>单击按钮可按降序对数组进行排序。</p>
+        <button onclick="functiona()">按钮</button>
+        <p id="democ"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS数组排序</h1>
+        <p>单击按钮可按字母顺序或数字顺序对数组进行排序。</p>
+        <button onclick="functionb()">按字母排序</button>
+        <button onclick="functionc()">按数字排序</button>
+        <p id="demod"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS数组排序</h1>
+        <p>请反复点击按钮，对数组进行随机排序。</p>
+        <button onclick="functiond()">试一试</button>
+        <p id="demoe"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS数组排序</h1>
+        <p>最低值是:
+            <span id="demof" />
+        </p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS数组排序</h1>
+        <p>最高值是:
+            <span id="demog" />
+        </p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS数组排序</h1>
+        <p>最高值是:
+            <span id="demoh" />
+        </p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS数组排序</h1>
+        <p>最高值是:
+            <span id="demoi" />
+        </p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS数组排序</h1>
+        <p>最高值是:
+            <span id="demoj" />
+        </p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS数组排序</h1>
+        <p>点击按钮按年份对汽车进行排序：</p>
+        <button onclick="functione()">排序</button>
+        <p id="demol"></p>
+    </div>
+</body>
+<script>
+    var fruitsa = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruitsa;
+    function myFunction() {
+        fruitsa.sort();
+        document.getElementById("demo").innerHTML = fruitsa;
+    }
+    //Apple,Banana,Mango,Orange
+
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demoa").innerHTML = fruits;
+    function myFuncation() {
+        fruits.sort();
+        fruits.reverse();
+        document.getElementById("demoa").innerHTML = fruits;
+    }
+    //Orange,Mango,Banana,Apple
+
+
+    var points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demob").innerHTML = points;
+    function asdasdasdasda() {
+        points.sort(function (a, b) { return a - b });
+        document.getElementById("demob").innerHTML = points;
+    }
+    //1,5,10,25,40,100
+
+
+    var points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("democ").innerHTML = points;
+    function functiona() {
+        points.sort(function (a, b) { return b - a });
+        document.getElementById("democ").innerHTML = points;
+    }
+    //100,40,25,10,5,1
+
+
+    var points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demod").innerHTML = points;
+    function functionb() {
+        points.sort();
+        document.getElementById("demod").innerHTML = points;
+    }
+    //1,10,100,25,40,5字母排序
+    function functionc() {
+        points.sort(function (a, b) { return a - b });
+        document.getElementById("demod").innerHTML = points;
+    }
+    //1,5,10,25,40,100数字排序
+
+    var points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demoe").innerHTML = points;
+    function functiond() {
+        points.sort(function (a, b) { return 0.5 - Math.random() });
+        document.getElementById("demoe").innerHTML = points;
+    }
+    //数组随机排序结果:40,100,1,5,25,10
+
+    var points = [40, 100, 1, 5, 25, 10];
+    points.sort(function (a, b) { return a - b });
+    document.getElementById("demof").innerHTML = points[0];
+    //最低值为1
+
+    var points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demog").innerHTML = myArrayMax(points);
+    function myArrayMax(arr) {
+        return Math.max.apply(null, arr);
+    }
+    //最高值是: 100
+
+    var points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demoh").innerHTML = myArrayMin(points);
+    function myArrayMin(arr) {
+        return Math.min.apply(null, arr);
+    }
+    //最高值是:1
+
+    var points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demoi").innerHTML = myArrayMax(points);
+    function myArrayMax(arr) {
+        var len = arr.length;
+        var max = -Infinity;
+        while (len--) {
+            if (arr[len] > max) {
+                max = arr[len];
+            }
+        }
+        return max;
+    }
+    //最高值是:100
+
+
+    var points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demoj").innerHTML = myArrayMin(points);
+    function myArrayMin(arr) {
+        var len = arr.length;
+        var min = Infinity;
+        while (len--) {
+            if (arr[len] < min) {
+                min = arr[len];
+            }
+        }
+        return min;
+    }
+    //最高值是:1
+
+
+    var cars = [
+        { type: "BMW", year: 2017 },
+        { type: "Audi", year: 2019 },
+        { type: "porsche", year: 2018 }
+    ];
+    displayCars();
+    function functione() {
+        cars.sort(function (a, b) { return a.year - b.year });
+        displayCars();
+    }
+    function displayCars() {
+        document.getElementById("demol").innerHTML =
+            cars[0].type + " " + cars[0].year + "<br>" +
+            cars[1].type + " " + cars[1].year + "<br>" +
+            cars[2].type + " " + cars[2].year;
+    }
+    //BMW 2017
+    //porsche 2018
+    //Audi 2019
+</script>
+
+</html>
