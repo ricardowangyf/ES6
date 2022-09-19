@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- JS数组 -->
+    <div>
+        <h1>JS 数组</h1>
+        <p id="demo"></p>
+        <!-- 数组用于在单一变量中存储多个值 -->
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组</h1>
+        <p id="demo1"></p>
+        <!-- 数组文本是创建 JavaScript 数组最简单的方法 -->
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组</h1>
+        <p id="demo2"></p>
+        <!-- 空格和折行并不重要。声明可横跨多行 -->
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组</h1>
+        <p id="demo3"></p>
+        <!-- 创建数组，并为其赋值 -->
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组</h1>
+        <p>使用数字索引（从 0 开始）访问 JavaScript 数组元素。</p>
+        <p id="demo4"></p>
+        <!-- 修改了 cars 中第一个元素的值 -->
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组</h1>
+        <p>数组使用数字访问它的元素。</p>
+        <p id="demo5"></p>
+        <!-- person[0] 返回 Bill -->
+    </div>
+    <hr />
+    <div>
+        <h1>JS 对象</h1>
+        <p>JS使用名称来访问对象属性。</p>
+        <p id="demo6"></p>
+        <!-- person.firstName返回Bill -->
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组</h1>
+        <p>length属性返回数组长度。</p>
+        <p id="demo7"></p>
+        <!-- length 属性返回数组的长度（数组元素的数目） -->
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组</h1>
+        <p>遍历数组的最佳方法是使用标准的for循环:</p>
+        <p id="demo8"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组</h1>
+        <p>Array.forEach()为每个数组元素调用函数。</p>
+        <p>Internet Explorer8以及更早的版本不支持Array.forEach()。</p>
+        <p id="demo9"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组</h1>
+        <p>push 方法向数组追加新元素。</p>
+        <button onclick="x()">试一试</button>
+        <p id="demo10"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组</h1>
+        <p>length 属性提供了一种在不使用 push() 方法的情况下将新元素附加到数组的简便方法。</p>
+        <button onclick="myFunction()">试一试</button>
+        <p id="demo11"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 数组</h1>
+        <p>typeof运算符在数组上使用时返回object:</p>
+        <p id="demo12"></p>
+    </div>
+</body>
+<script>
+    var cars = ["Audi", "BMW", "porsche"];
+    document.getElementById("demo").innerHTML = cars;
+    //数组用于在单一变量中存储多个值
+
+    var cars = ["Audi", "BMW", "porsche"];
+    document.getElementById("demo1").innerHTML = cars;
+    //数组文本是创建JavaScript数组最简单的方法
+
+    var cars = [
+        "Audi",
+        "BMW",
+        "porsche"
+    ];
+    document.getElementById("demo2").innerHTML = cars;
+    //空格和折行并不重要。声明可横跨多行
+
+    var cars = new Array("Audi", "BMW", "porsche");
+    document.getElementById("demo3").innerHTML = cars;
+    //创建数组,并为其赋值
+
+    var cars = ["Audi", "BMW", "porsche"];
+    cars[0] = "Volvo";
+    document.getElementById("demo4").innerHTML = cars;
+    //修改了cars中第一个元素的值
+
+    var person = ["Bill", "Gates", 62];
+    document.getElementById("demo5").innerHTML = person[0];
+    //person[0]返回 Bill
+
+    var person = { firstName: "Bill", lastName: "Gates", age: 19 };
+    document.getElementById("demo6").innerHTML = person["firstName"];
+    //person.firstName返回Bill
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo7").innerHTML = fruits.length;
+    // length 属性返回数组的长度（数组元素的数目）
+
+    var fruits, text, fLen, i;
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fLen = fruits.length;
+    text = "<ul>";
+    for (i = 0; i < fLen; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+    }
+    text += "</ul>";
+    document.getElementById("demo8").innerHTML = text;
+
+
+    var fruits, text;
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    text = "<ul>";
+    fruits.forEach(myFunction);
+    text += "</ul>";
+    document.getElementById("demo9").innerHTML = text;
+    function myFunction(value) {
+        text += "<li>" + value + "</li>";
+    }
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo10").innerHTML = fruits;
+    function x() {
+        fruits.push("Lemon");
+        document.getElementById("demo10").innerHTML = fruits;
+    }
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("asdasda").innerHTML = fruits;
+    function myFunction() {
+        fruits[fruits.length] = "Lemon";
+        document.getElementById("demo11").innerHTML = fruits;
+    }
+
+    var fruits =["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo12").innerHTML = typeof fruits;
+</script>
+
+</html>
