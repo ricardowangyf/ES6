@@ -63,6 +63,84 @@
         <p>无法安全地比较布尔和对象。</p>
         <p id="demoh"></p>
     </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把5赋值给 x,然后显示比较(x == 8)的值：</p>
+        <p id="demoi"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把 5 赋值给 x,然后显示比较(x == 5)的值：</p>
+        <p id="demoj"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把5赋值给 x,然后显示比较(x == "5")的值：</p>
+        <p id="demok"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把5赋值给 x,然后显示比较(x === 5)的值：</p>
+        <p id="demol"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把5赋值给 x,然后显示比较(x === "5")的值：</p>
+        <p id="demom"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把5赋值给 x,然后显示比较(x != 8)的值：</p>
+        <p id="demon"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把5赋值给x,然后显示比较 (x !== 5) 的值：</p>
+        <p id="demoo"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把5赋值给x,然后显示比较 (x !== "5") 的值：</p>
+        <p id="demop"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把5赋值给x,然后显示比较(x !== 8)的值：</p>
+        <p id="demoq"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把5赋值给x,然后显示比较 (x > 8) 的值：</p>
+        <p id="demor"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把5赋值给x,然后显示比较 (x < 8) 的值：</p>
+                <p id="demos"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把5赋值给x,然后显示比较 (x >= 8) 的值：</p>
+        <p id="demot"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 比较</h1>
+        <p>把5赋值给x,然后显示比较 (x <= 8) 的值：</p>
+        <p id="demou"></p>
+    </div>
 </body>
 <script>
     var txt = "";
@@ -139,7 +217,58 @@
     var x = false;         // x 是布尔值
     var y = new Boolean(false);  // y 是对象
     document.getElementById("demoh").innerHTML = (x == y);
+    //true  
+
+    var x = 5;
+    document.getElementById("demoi").innerHTML = (x == 8);
+    //false
+
+    var x = 5;
+    document.getElementById("demoj").innerHTML = (x == 5);
     //true
+
+    var x = 5;
+    document.getElementById("demok").innerHTML = (x == "5");
+    //true
+
+    var x = 5;
+    document.getElementById("demol").innerHTML = (x === 5);
+    //true
+
+    var x = 5;
+    document.getElementById("demom").innerHTML = (x === "5");
+    //false
+
+    var x = 5;
+    document.getElementById("demon").innerHTML = (x != 8);
+    //true
+
+    var x = 5;
+    document.getElementById("demoo").innerHTML = (x !== 5);
+    //false
+
+    var x = 5;
+    document.getElementById("demop").innerHTML = (x !== "5");
+    //true
+
+    var x = 5;
+    document.getElementById("demoq").innerHTML = (x !== 8);
+    //true
+
+    var x = 5;
+    document.getElementById("demor").innerHTML = (x > 8);
+    //false
+
+    var x = 5;
+    document.getElementById("demos").innerHTML = (x < 8);
+    //true
+
+    var x = 5;
+    document.getElementById("demot").innerHTML = (x >= 8);
+    //false
+
+    var x = 5;
+    document.getElementById("demou").innerHTML = (x <= 8);
 </script>
 
 </html>
