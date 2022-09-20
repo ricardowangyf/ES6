@@ -45,6 +45,24 @@
         <p>every() 方法检查所有数组值是否通过测试。</p>
         <p id="demoe"></p>
     </div>
+    <hr />
+    <div>
+        <h2>JS const</h2>
+        <p>声明一个常量数组不会使元素不可更改：</p>
+        <p id="demof"></p>
+    </div>
+    <hr />
+    <div>
+        <p>显示 0 的布尔值：</p>
+        <button onclick="functioan()">试一试</button>
+        <p id="demog"></p>
+    </div>
+    <hr />
+    <div>
+        <p>永远不要将布尔值创建为对象。</p>
+        <p>无法安全地比较布尔和对象。</p>
+        <p id="demoh"></p>
+    </div>
 </body>
 <script>
     var txt = "";
@@ -105,6 +123,23 @@
         return value > 18;
     }
     //结果为false
+
+    const cars = ["Saab", "Volvo", "BMW"];
+    cars[0] = "Toyota";
+    cars.push("Audi");
+    document.getElementById("demof").innerHTML = cars;
+    //Toyota,Volvo,BMW,Audi
+
+    function functioan() {
+        var x = 0;
+        document.getElementById("demog").innerHTML = Boolean(x);
+    }
+    //false
+
+    var x = false;         // x 是布尔值
+    var y = new Boolean(false);  // y 是对象
+    document.getElementById("demoh").innerHTML = (x == y);
+    //true
 </script>
 
 </html>
