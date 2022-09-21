@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>如果小时小于18:00,显示“美好的一天!”:</p>
+        <p id="demo">晚安</p>
+    </div>
+    <hr />
+    <div>
+        <p>单击按钮以显示基于时间的问候语：</p>
+        <button onclick="myFunction()">试一试</button>
+        <p id="demoone"></p>
+    </div>
+    <hr />
+    <div>
+        <p>单击按钮以显示基于时间的问候语：</p>
+        <button onclick="functiona()">试一试</button>
+        <p id="demotwo"></p>
+    </div>
+</body>
+<script>
+    if (new Date().getHours() < 18) {
+        document.getElementById("demo").innerHTML = "美好的一天！";
+    }
+    function myFunction() {
+        var hour = new Date().getHours();
+        var greeting;
+        if (hour < 18) {
+            greeting = "日安";
+        } else {
+            greeting = "晚安";
+        }
+        document.getElementById("demoone").innerHTML = greeting;
+    }
+    function functiona() {
+        var greeting;
+        var time = new Date().getHours();
+        if (time < 10) {
+            greeting = "早安";
+        } else if (time < 20) {
+            greeting = "日安";
+        } else {
+            greeting = "晚安";
+        }
+        document.getElementById("demotwo").innerHTML = greeting;
+    }
+</script>
+
+</html>
