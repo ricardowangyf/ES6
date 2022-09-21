@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>JS typeof 运算符</h1>
+        <p>typeof运算符返回变量、对象、函数或表达式的类型。</p>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS typeof</h1>
+        <p>typeof运算符为对象、数组和null返回object。</p>
+        <p>typeof运算符不对函数返回 object。</p>
+        <p id="demoa"></p>
+    </div>
+    <hr />
+    <div>
+        
+    </div>
+</body>
+
+<script>
+    document.getElementById("demo").innerHTML =
+        typeof "john" + "<br>" +
+        typeof 3.14 + "<br>" +
+        typeof NaN + "<br>" +
+        typeof false + "<br>" +
+        typeof [1, 2, 3, 4] + "<br>" +
+        typeof { name: 'john', age: 34 } + "<br>" +
+        typeof new Date() + "<br>" +
+        typeof function () { } + "<br>" +
+        typeof myCar + "<br>" +
+        typeof null;
+
+    document.getElementById("demoa").innerHTML =
+        typeof { name: 'john', age: 34 } + "<br>" +
+        typeof [1, 2, 3, 4] + "<br>" +
+        typeof null + "<br>" +
+        typeof function myFunc() { };
+
+    document.getElementById("demob").innerHTML =
+        "john".constructor + "<br>" +
+        (3.14).constructor + "<br>" +
+        false.constructor + "<br>" +
+        [1, 2, 3, 4].constructor + "<br>" +
+        { name: 'john', age: 34 }.constructor + "<br>" +
+        new Date().constructor + "<br>" +
+        function () { }.constructor;
+
+    document.getElementById("democ").innerHTML =
+        "john".constructor + "<br>" +
+        (3.14).constructor + "<br>" +
+        false.constructor + "<br>" +
+        [1, 2, 3, 4].constructor + "<br>" +
+        { name: 'john', age: 34 }.constructor + "<br>" +
+        new Date().constructor + "<br>" +
+        function () { }.constructor;
+</script>
+
+</html>
