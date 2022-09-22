@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>JS For In Loop</h2>
+        <p>for in 语句循环遍历对象的属性：</p>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <h2>JS For In</h2>
+        <p>for in 语句可以遍历数组值：</p>
+        <p id="demoone"></p>
+    </div>
+    <hr />
+    <div>
+        <h2>JS Array.forEach()</h2>
+        <p>为每个数组元素调用一次函数。</p>
+        <p id="asdasdasd"></p>
+    </div>
+    <hr />
+    <div>
+        <h2>JS Array.forEach()</h2>
+        <p>为每个数组元素调用一次函数。</p>
+        <p id="asdw1fefasdasd"></p>
+    </div>
+</body>
+<script>
+    const person = { fname: "Bill", lname: "Gates", age: 19 };
+    let txt = "";
+    for (let x in person) {
+        txt += person[x] + " ";
+    }
+    document.getElementById("demo").innerHTML = txt;
+    //Bill Gates 19
+
+    const numbers = [45, 4, 9, 16, 25];
+    let xasx = "";
+    for (let x in numbers) {
+        xasx += numbers[x] + "<br>";
+    }
+    document.getElementById("demoone").innerHTML = xasx;
+    //45
+    //4
+    //9
+    //16
+    //25
+
+    const numbera = [45, 4, 9, 16, 25];
+    let txta = "";
+    numbera.forEach(myFunction);
+    document.getElementById("asdasdasd").innerHTML = txta;
+    function myFunction(value, index, array) {
+        txta += value + "<br>";
+    }
+    //45
+    //4
+    //9
+    //16
+    //25
+
+    const numberasd = [45, 4, 9, 16, 25];
+    let asdasdasd = "";
+    numberasd.forEach(myFunction);
+    document.getElementById("asdw1fefasdasd").innerHTML = asdasdasd;
+
+    function myFunction(value) {
+        asdasdasd += value + "<br>";
+    }
+</script>
+
+</html>
