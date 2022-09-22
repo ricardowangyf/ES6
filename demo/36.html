@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>JS字符串方法</h1>
+        <p>在字符串中搜索“W3School”,并显示匹配的位置:</p>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS正则表达式</h1>
+        <p>在字符串中搜索“w3School”,并显示匹配的位置:</p>
+        <p id="demoa"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS正则表达式</h1>
+        <p>将“microsoft”替换为以下段落中的“W3School”:</p>
+        <button onclick="xxxxxxxxxx()">试一试</button>
+        <p id="demob">Please visit Microsoft and Microsoft!</p>
+    </div>
+    <hr />
+    <div>
+        <p>请单击按钮,对字符串中的“w3school”进行不区分大小写的搜索。</p>
+        <button onclick="aaaaaaaaaaa()">试一试</button>
+        <p id="democ"></p>
+    </div>
+    <hr />
+    <div>
+        <p>请单击按钮,在字符串中对“is”进行全局搜索。</p>
+        <button onclick="sssssssssssssssss()">试一试</button>
+        <p id="demod"></p>
+    </div>
+    <hr />
+    <div>
+        <p>请单击按钮,在字符串中每行的开头对“is”进行多行搜索。</p>
+        <button onclick="gggggggggg()">试一试</button>
+        <p id="demoe"></p>
+    </div>
+    <hr />
+    <div>
+        <p>请单击按钮,对字符串中的字符“h”进行全局搜索。</p>
+        <button onclick="waaasadaw()">试一试</button>
+        <p id="demof"></p>
+    </div>
+    <hr />
+    <div>
+        <p>请单击按钮，字符串中的数字 1 到 4 进行全局搜索。</p>
+        <button onclick="qqqqqqqqqqq()">试一试</button>
+        <p id="demog"></p>
+    </div>
+    <hr />
+    <div>
+        <p>请单击按钮，可以对任何指定的备选项进行全局搜索（红色|绿色）。</p>
+        <button onclick="wawsd()">试一试</button>
+        <p id="demoh"></p>
+    </div>
+    <hr />
+    <div>
+        <h2>JS正则表达式</h2>
+        <p>检索下面段落中的一个 "e":</p>
+        <p id="a">The best things in life are free!</p>
+        <p id="demoi"></p>
+    </div>
+    <hr />
+    <div>
+        <h2>JS正则表达式</h2>
+        <p id="s"></p>
+    </div>
+</body>
+
+<script>
+    var str = "Visit W3School!";
+    var n = str.search("W3School");
+    document.getElementById("demo").innerHTML = n;
+    //6
+
+    var str = "Visit W3School!";
+    var n = str.search(/w3School/i);
+    document.getElementById("demoa").innerHTML = n;
+    //6
+
+    function xxxxxxxxxx() {
+        var str = document.getElementById("demob").innerHTML;
+        var txt = str.replace(/microsoft/i, "W3School");
+        document.getElementById("demob").innerHTML = txt;
+    }
+    //Please visit W3School and W3School!
+
+    function aaaaaaaaaaa() {
+        var str = "Visit W3School";
+        var patt1 = /w3school/i;
+        var result = str.match(patt1);
+        document.getElementById("democ").innerHTML = result;
+    }
+    //W3School
+
+    function sssssssssssssssss() {
+        var str = "Is this all there is?";
+        var patt1 = /is/g;
+        var result = str.match(patt1);
+        document.getElementById("demod").innerHTML = result;
+    }
+    //is,is
+
+    function gggggggggg() {
+        var str = "\nIs th\nis it?";
+        var patt1 = /^is/m;
+        var result = str.match(patt1);
+        document.getElementById("demoe").innerHTML = result;
+    }
+    //is
+
+    function waaasadaw() {
+        var str = "Is this all there is?";
+        var patt1 = /[h]/g;
+        var result = str.match(patt1);
+        document.getElementById("demof").innerHTML = result;
+    }
+    //h,h
+
+    function qqqqqqqqqqq() {
+        var str = "123456789";
+        var patt1 = /[1-4]/g;
+        var result = str.match(patt1);
+        document.getElementById("demog").innerHTML = result;
+    }
+    //1,2,3,4
+
+    function wawsd() {
+        var str = "re, green, red, green, gren, gr, blue, yellow";
+        var patt1 = /(red|green)/g;
+        var result = str.match(patt1);
+        document.getElementById("demoh").innerHTML = result;
+    }
+    //green,red,green
+
+    text = document.getElementById("a").innerHTML;
+    document.getElementById("demoi").innerHTML = /e/.test(text);
+    //The best things in life are free!
+    //true
+
+    var obj = /e/.exec("The best things in life are free!");
+    document.getElementById("s").innerHTML =
+        "Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
+    //Found e in position 2 in the text: The best things in life are free!
+</script>
+</script>
+
+</html>
