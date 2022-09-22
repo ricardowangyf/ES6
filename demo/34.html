@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>JS For Of 循环</h2>
+        <p>for of 语句循环遍历任何可迭代对象的值：</p>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <h2>JS For Of 循环</h2>
+        <p>for of 语句循环遍历可迭代对象的值。</p>
+        <p id="demoa"></p>
+    </div>
+</body>
+<script>
+    const cars = ["BMW", "Volvo", "Mini"];
+    let text = "";
+    for (let x of cars) {
+        text += x + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+
+    let language = "JavaScript";
+    let texta = "";
+    for (let x of language) {
+        texta += x + "<br>";
+    }
+    document.getElementById("demoa").innerHTML = texta;
+</script>
+
+</html>
