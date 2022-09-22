@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>JS while</h2>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <h2>JS do ... while</h2>
+        <p id="demoa"></p>
+    </div>
+    <hr />
+    <div>
+        <p id="demob"></p>
+    </div>
+</body>
+<script>
+    var text = "";
+    var i = 0;
+    while (i < 10) {
+        text += "<br>数字是 " + i;
+        i++;
+    }
+    document.getElementById("demo").innerHTML = text;
+    //数字是 0
+    //数字是 1
+    //数字是 2
+    //数字是 3
+    //数字是 4
+    //数字是 5
+    //数字是 6
+    //数字是 7
+    //数字是 8
+    //数字是 9
+
+    var text = ""
+    var i = 0;
+    do {
+        text += "<br>数字是 " + i;
+        i++;
+    }
+    while (i < 10);
+    document.getElementById("demoa").innerHTML = text;
+    //数字是 0
+    //数字是 1
+    //数字是 2
+    //数字是 3
+    //数字是 4
+    //数字是 5
+    //数字是 6
+    //数字是 7
+    //数字是 8
+    //数字是 9
+
+    var cars = ["BMW", "Volvo", "porsche", "Ford"];
+    var i = 0;
+    var text = "";
+    for (; cars[i];) {
+        text += cars[i] + "<br>";
+        i++;
+    }
+    document.getElementById("demob").innerHTML = text;
+</script>
+</script>
+
+</html>
