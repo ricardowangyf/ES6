@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <p id="demoa"></p>
+    </div>
+    <hr />
+    <div>
+        <p id="demob"></p>
+    </div>
+    <hr />
+    <div>
+        <p id="demco"></p>
+    </div>
+</body>
+<script>
+    x = 5; // 把 5 赋值给 x
+    elem = document.getElementById("demo"); // 查找元素
+    elem.innerHTML = x;   // 在这个元素中显示 x
+    var x;
+    //5
+
+    var x; // 声明 x
+    x = 5; // 把 5 赋值给 x
+
+    elem = document.getElementById("demoa"); // 查找元素
+    elem.innerHTML = x;           // 在这个元素中显示 x
+
+    var x = 5; // 初始化 x
+    var y = 7; // 初始化 y
+    elem = document.getElementById("demob"); // 查找元素
+    elem.innerHTML = x + " " + y;       // 显示 x 和 y
+    //5 7
+
+    var x = 5;  // 初始化 x
+    elem = document.getElementById("demco");      // 查找元素
+    elem.innerHTML = "x is " + x + " and y is " + y;  // 显示 x 和 y
+    var y = 7;  // Initialize y
+    //x is 5 and y is 7
+</script>
+
+</html>
