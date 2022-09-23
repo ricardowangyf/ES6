@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>使用 "use strict":</h1>
+        <h3>不允许使用变量而不声明它。</h3>
+        <p>在浏览器中激活调试(F12)以查看错误报告。</p>
+    </div>
+    <hr />
+    <div>
+        <h1>全局 "use strict" 声明</h1>
+        <p>在浏览器中激活调试(F12)以查看错误报告。</p>
+    </div>
+</body>
+
+<script>
+    "use strict";
+    x = 3.14;
+    // x is not defined
+
+    "use strict";
+    myFunction();
+    function myFunction() {
+        y = 3.14;
+    }
+
+    "use strict";
+    x = 3.14;
+
+
+    "use strict";
+    x = { p1: 10, p2: 20 };
+    //在不声明对象的情况下使用对象也是不允许的
+
+
+    "use strict";
+    var x = 3.14;
+    delete x;
+    //删除变量（或对象）是不允许的：
+
+    "use strict";
+    function x(p1, p2) { };
+    delete x;
+    //删除函数是不允许的：
+
+    "use strict";
+    function x(p1, p1) { };
+    //重复参数名是不允许的
+
+    "use strict";
+    var x = 010;
+    // 八进制数值文本是不允许的：
+
+    "use strict";
+    var x = \010;
+    //转义字符是不允许的
+
+    "use strict";
+    var obj = {};
+    Object.defineProperty(obj, "x", { value: 0, writable: false });
+    obj.x = 3.14;
+    //写入只读属性是不允许的
+
+    "use strict";
+    var obj = { get x() { return 0 } };
+    obj.x = 3.14;
+    //写入只能获取的属性是不允许的
+
+    "use strict";
+    delete Object.prototype;
+    //删除不可删除的属性是不允许的
+
+    "use strict";
+    var eval = 3.14;
+    //字符串 "eval" 不可用作变量
+
+    "use strict";
+    var arguments = 3.14;
+    //字符串 "arguments" 不可用作变量
+</script>
+
+</html>
