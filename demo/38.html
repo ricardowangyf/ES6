@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>JS 局部作用域</h1>
+        <p>myFunction()之外的carName未定义。</p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 全局作用域</h1>
+        <p>可以从任何脚本或函数中访问全局变量。</p>
+        <p id="demoa"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JavaScript 作用域</h1>
+        <p>在 HTML 中，通过 <b>var</b> 定义的全局变量，会成为 window 变量。</p>
+        <p id="demob"></p>
+    </div>
+</body>
+<script>
+    myFunction();
+    function myFunction() {
+        var carName = "porsche";
+        document.getElementById("demo1").innerHTML =
+            typeof carName + " " + carName;
+    }
+    document.getElementById("demo2").innerHTML =
+        typeof carName;
+    //undefined
+
+    var carName = "porsche";
+    myFunction();
+    function myFunction() {
+        document.getElementById("demoa").innerHTML =
+            "I can display " + carName;
+    }
+    //I can display porsche
+
+    var carName = "porsche";
+    document.getElementById("demob").innerHTML = "我可以显示 " + window.carName;
+    //我可以显示 porsche
+</script>
+
+</html>
