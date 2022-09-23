@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>
+            JS
+            <b>this</b>
+            关键词
+        </h1>
+        <p>在本例中，
+            <b>this</b>
+            代表
+            <b>person</b>
+            对象。
+        </p>
+        <p>因为 person 对象“拥有” fullName 方法。</p>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>
+            JS
+            <b>this</b>
+            关键词
+        </h1>
+        <p>
+            在本例中，
+            <b>this</b>
+            引用 window 对象：
+        </p>
+        <p id="demoa"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>
+            JS
+            <b>this</b>
+            关键词
+        </h1>
+        <p>
+            在本例中,
+            <b>this</b>
+            代表“拥有” myFunction 的对象：
+        </p>
+        <p id="dcemo"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>
+            JS
+            <b>this</b>
+            关键词
+        </h1>
+        <p>
+            在函数中，默认地，
+            <b>this</b>
+            引用全局对象。
+        </p>
+        <p>
+            在严格模式中，
+            <b>this</b>
+            是
+            <b>undefined</b>,
+            因为严格模式不允许默认绑定:
+        </p>
+        <p id="decamo"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JavaScript <b>this</b> 关键词</h1>
+        <button onclick="this.style.display='none'">单击来删除我！</button>
+    </div>
+    <hr />
+    <div>
+        <h1>
+            JS
+            <b>this</b>
+            关键词
+        </h1>
+        <p>
+            在本例中，
+            <b>this</b>
+            代表“拥有” fullName 方法的 person 对象。
+        </p>
+        <p id="demaaaao"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>
+            JS
+            <b>this</b>
+            关键词
+        </h1>
+        <p>
+            在本例中，
+            <b>this</b>
+            代表
+            <b>person</b>
+            对象。
+        </p>
+        <p>因为 person 对象“拥有” fullName 方法。</p>
+        <p id="demaaasdasdo"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>
+            JS
+            <b>this</b>
+            关键词
+        </h1>
+        <p>
+            在本例中，
+            <strong>this</strong>
+            引用 person2,即使它是 person1 的方法：
+        </p>
+        <p id="degrwgwrgmo"></p>
+    </div>
+</body>
+<script>
+    // 创建对象：
+    var person = {
+        firstName: "Bill",
+        lastName: "Gates",
+        id: 678,
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+    // 显示来自对象的数据：
+    document.getElementById("demo").innerHTML = person.fullName();
+    //Bill Gates
+
+    var x = this;
+    document.getElementById("demoa").innerHTML = x;
+    //[object Window]
+
+    document.getElementById("dcemo").innerHTML = myFunction();
+    function myFunction() {
+        return this;
+    }
+    //[object Window]
+
+    "use strict";
+    document.getElementById("decamo").innerHTML = myFunction();
+    function aaaaa() {
+        return this;
+    }
+
+    // 创建对象：
+    var person = {
+        firstName: "Bill",
+        lastName: "Gates",
+        id: 678,
+        myFunction: function () {
+            return this;
+        }
+    };
+
+    // 显示来自对象的数据：
+    document.getElementById("demaaaao").innerHTML = person.myFunction();
+    //[object Object]
+
+
+    // 创建对象：
+    var person = {
+        firstName: "Bill",
+        lastName: "Gates",
+        id: 678,
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+    // 显示来自对象的数据：
+    document.getElementById("demaaasdasdo").innerHTML = person.fullName();
+    //Bill Gates
+
+    var person1 = {
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+    var person2 = {
+        firstName: "Bill",
+        lastName: "Gates",
+    }
+    var x = person1.fullName.call(person2);
+    document.getElementById("degrwgwrgmo").innerHTML = x;
+    //Bill Gates
+</script>
+
+</html>
