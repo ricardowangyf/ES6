@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <p>请输入 5 到 10 之间的数字：</p>
+        <input id="demoa" type="text">
+        <button type="button" onclick="myFunction()">检测输入</button>
+        <p id="p"></p>
+    </div>
+    <hr />
+    <div>
+        <p>请输入 5 到 10 之间的数字：</p>
+        <input id="demob" type="text">
+        <button type="button" onclick="butotn()">检测输入</button>
+        <p id="pp"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS 异常</h1>
+        <p>您不能将数字的有效位数设置为500：</p>
+        <p id="democ">
+    </div>
+    <hr />
+    <div>
+        <h1>JS 异常</h1>
+        <p>您不能将数字的有效位数设置为500：</p>
+        <p id="demod">
+    </div>
+</body>
+<script>
+    try {
+        adddlert("欢迎您，亲爱的用户！");
+    }
+    catch (err) {
+        document.getElementById("demo").innerHTML = err.message;
+    }
+    //adddlert is not defined
+
+    function myFunction() {
+        var message, x;
+        message = document.getElementById("p");
+        message.innerHTML = " ";
+        x = document.getElementById("demoa").value;
+        try {
+            if (x == " ") throw "空";
+            if (isNaN(x)) throw "不是数字";
+            x = Number(x);
+            if (x < 5) throw "太小";
+            if (x > 10) throw "太大";
+        }
+        catch (err) {
+            message.innerHTML = "输入:" + err;
+        }
+    }
+
+    function butotn() {
+        var message, x;
+        message = document.getElementById("pp");
+        message.innerHTML = " ";
+        x = document.getElementById("demob").value;
+        try {
+            if (x == "") throw "是空的";
+            if (isNaN(x)) throw "不是数字";
+            x = Number(x);
+            if (x > 10) throw "太大";
+            if (x < 5) throw "太小";
+        }
+        catch (err) {
+            message.innerHTML = "输入：" + err;
+        }
+        finally {
+            document.getElementById("demob").value = "";
+        }
+    }
+
+    var num = 1;
+    try {
+        num.toPrecision(500);
+    }
+    catch (err) {
+        document.getElementById("democ").innerHTML = err.name;
+    }
+
+    var num = 1;
+    try {
+        num.toPrecision(500);
+    }
+    catch (err) {
+        document.getElementById("demod").innerHTML = err.name;
+    }
+</script>
+
+</html>
