@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>JS函数</h2>
+        <p>这个例子展示了函数的语法，没有使用箭头函数的语法。</p>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <h2>JS箭头函数</h2>
+        <p>此例展示了箭头函数的语法以及如何使用它。</p>
+        <p id="devvvmo"></p>
+    </div>
+    <hr />
+    <div>
+        <h2>JS箭头函数</h2>
+        <p>此例展示了没有括号或 return 关键字的箭头函数。</p>
+        <p id="demvrvro"></p>
+    </div>
+</body>
+<script>
+    var hello;
+    hello = function () {
+        return "Hello World!";
+    }
+    document.getElementById("demo").innerHTML = hello();
+    //Hello World!
+
+    var hello;
+    hello = () => {
+        return "Hello World!";
+    }
+    document.getElementById("devvvmo").innerHTML = hello();
+    //Hello World!
+
+    var hello;
+    hello = () => "Hello World!";
+    document.getElementById("demvrvro").innerHTML = hello();
+    //Hello World!
+</script>
+
+</html>
