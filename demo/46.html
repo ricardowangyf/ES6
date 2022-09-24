@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>我的网页</h2>
+        <p>代码行换行的最佳位置是在运算符或逗号之后。</p>
+        <p id="demo"></p>
+    </div>
+</body>
+
+<script>
+    document.getElementById("demo").innerHTML =
+        "Hello Dolly.";
+
+    var values = ["Volvo", "Saab", "Fiat"];
+    var person = {
+        firstName: "Bill",
+        lastName: "Gates",
+        age: 50,
+        eyeColor: "blue"
+    };
+    //以分号结束单条语句
+
+    function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+    }
+    //代码块缩进使用 4 个空格
+
+    var x = y + z;
+    var values = ["Volvo", "Saab", "Fiat"];
+    //在运算符（ = + - * / ）周围以及逗号之后添加空格
+
+    firstName = "Bill";
+    lastName = "Gates";
+    price = 19.90;
+    tax = 0.20;
+    fullPrice = price + (price * tax);
+    //对标识符名称（变量和函数）使用了驼峰式大小写
+</script>
+
+</html>
