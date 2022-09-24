@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>JS类</h1>
+        <p>如何使用JS类。</p>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS类方法</h1>
+        <p>如何定义和使用类方法。</p>
+        <p id="demao"></p>
+    </div>
+    <hr />
+    <div>
+        <h1>JS类方法</h1>
+        <p>如何定义和使用类方法。</p>
+        <p id="daemo"></p>
+    </div>
+</body>
+<script>
+    class Car {
+        constructor(name, year) {
+            this.name = name;
+            this.year = year;
+        }
+    }
+    const myCar = new Car("Ford", 2014);
+    document.getElementById("demo").innerHTML = myCar.name + " " + myCar.year;
+
+
+    class Cara {
+        constructor(name, year) {
+            this.name = name;
+            this.year = year;
+
+        }
+        age() {
+            let date = new Date();
+            return date.getFullYear() - this.year;
+        }
+    }
+    let xxx = new Car("Ford", 2014);
+    document.getElementById("demao").innerHTML = "My car is " + xxx.age() + " years old.";
+
+    class Car {
+        constructor(name, year) {
+            this.name = name;
+            this.year = year;
+
+        }
+        age() {
+            let date = new Date();
+            return date.getFullYear() - this.year;
+        }
+    }
+    let xxxxxx = new Car("Ford", 2014);
+    document.getElementById("daemo").innerHTML = "My car is " + xxxxxx.age() + " years old.";
+</script>
+
+</html>
