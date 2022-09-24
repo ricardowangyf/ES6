@@ -26,6 +26,14 @@
         <p>此例展示了没有括号或 return 关键字的箭头函数。</p>
         <p id="demvrvro"></p>
     </div>
+    <hr />
+    <div>
+        <h2>JS "this"</h2>
+        <p>此例演示在常规函数中,“this”关键字代表不同的对象,具体取决于函数的调用方式。</p>
+        <p>点击按钮再次执行“hello”函数,你会看到这次“this”代表的是 button 对象。</p>
+        <button id="btn">点击我！</button>
+        <p id="dwasdemo"></p>
+    </div>
 </body>
 <script>
     var hello;
@@ -46,6 +54,13 @@
     hello = () => "Hello World!";
     document.getElementById("demvrvro").innerHTML = hello();
     //Hello World!
+
+
+    var hello = function () {
+        document.getElementById("dwasdemo").innerHTML += this;
+    }
+    window.addEventListener("load", hello);
+    document.getElementById("btn").addEventListener("click", hello);
 </script>
 
 </html>
