@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>切勿将字符串创建为对象。</p>
+        <p>字符串和对象无法安全地进行比较。</p>
+        <p id="demo"></p>
+    </div>
+    <hr />
+    <div>
+        <p id="demoo"></p>
+    </div>
+    <hr />
+    <div>
+        <p id="demao"></p>
+    </div>
+</body>
+<script>
+    var x = "Bill";        // x 是字符串
+    var y = new String("Bill");  // y 是对象
+    document.getElementById("demo").innerHTML = x === y;
+    //false
+
+    var x1 = {};
+    var x2 = "";
+    var x3 = 0;
+    var x4 = false;
+    var x5 = [];
+    var x6 = /()/;
+    var x7 = function () { };
+    document.getElementById("demoo").innerHTML =
+        "x1: " + typeof x1 + "<br>" +
+        "x2: " + typeof x2 + "<br>" +
+        "x3: " + typeof x3 + "<br>" +
+        "x4: " + typeof x4 + "<br>" +
+        "x5: " + typeof x5 + "<br>" +
+        "x6: " + typeof x6 + "<br>" +
+        "x7: " + typeof x7 + "<br>";
+    //x1:object
+    //x2:string
+    //x3:number
+    //x4:boolean
+    //x5:object
+    //x6:object
+    //x7:sfunction
+
+    var x = "Hello";
+    var x = 5;
+    document.getElementById("demao").innerHTML = typeof x;
+    // /number
+</script>
+
+</html>
